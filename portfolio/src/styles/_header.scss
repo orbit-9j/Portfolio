@@ -1,0 +1,84 @@
+.header{
+    background-image: url("https://images.pexels.com/photos/102539/nature-milky-way-night-stars-102539.jpeg?cs=srgb&dl=pexels-free-nature-stock-102539.jpg&fm=jpg"); //photo under creative commons license
+    background-size: cover;
+    background-position: top;
+
+    //try this one https://images.pexels.com/photos/2644734/pexels-photo-2644734.jpeg?cs=srgb&dl=pexels-yasin-g%C3%BCndogdu-2644734.jpg&fm=jpg
+
+    @include breakpoint-down(small) {
+        background-size:300%;
+    }
+}
+
+.heading{
+    color: white;
+    margin:0;    
+    
+    &__header-text{
+        opacity:1;
+        @include flexCenter();
+        display: block;
+        padding:6.25rem 3.125rem;
+
+        h1{ 
+            margin-bottom: 1.25rem;
+            font-size: 400%;
+        
+            @include h1;
+            @include breakpoint-down(small) {
+                font-size:350%;
+            }
+        }
+
+        .link { 
+            text-decoration: none;
+            &:hover, &:visited
+            {
+                color: white;
+            }
+        }
+
+        h2{
+            margin-bottom: .625rem;
+            font-size: 250%;
+        }
+
+        h2, h3{
+            color: $lightest;
+            @include breakpoint-down(small) {
+                font-size: 150%;
+            }
+        }
+    }
+}
+
+.nav {
+    background-color: $greyishDark;
+
+    &__links{
+        margin: auto;
+        max-width: 31.25rem;
+        @include flexCenter();
+
+        a{
+            flex:1;
+            padding:1.25rem;
+            text-decoration: none;
+            transition: 300ms ease-in-out;
+            font-size: 120%;
+            color: white;
+
+            @include breakpoint-down(small) {
+                font-size: 105%;
+            }
+            
+            &:hover{
+                background-color: $lightest;
+            }
+
+            &:visited{
+                color: white;
+            }
+        }
+    }
+}
