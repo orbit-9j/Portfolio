@@ -49,6 +49,7 @@
 
 .heading__header-text .link {
   text-decoration: none;
+  color: white;
 }
 
 .heading__header-text .link:hover, .heading__header-text .link:visited {
