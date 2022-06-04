@@ -62,7 +62,7 @@ function ProjectPage(Props) {
   const location = useLocation();
   const projectP = location.state; //keeps track of what project the user clicked on in the home page, determined by the project's ID in the database
   var imageArray = [];
-  var imagePath = process.env.PUBLIC_URL+"images/";
+  var imagePath = process.env.PUBLIC_URL+"/images/";
 
   //compares project IDs to the number passed to this page
   if (projectP == "1"){// if-else statement because there are only 2 items, will need re-writing later for scalability

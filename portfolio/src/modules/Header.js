@@ -6,7 +6,7 @@ function scrollDown(){ //scrolls down to the About Me in the footer
 }
 
 export default function Header(){
-  var pdfPath = process.env.PUBLIC_URL+"Austin_Tian_CV.pdf";
+  var pdfPath = process.env.PUBLIC_URL+"/Austin_Tian_CV.pdf";
     return (
       <header>
         <div className="header">

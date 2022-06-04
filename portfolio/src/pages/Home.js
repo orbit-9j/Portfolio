@@ -7,7 +7,7 @@ function Body(){
 
   //creates cards for games or websites depending on the input file
   const gameCards = games.map(item =>{
-    var imagePath = process.env.PUBLIC_URL+"images/"+item.image;
+    var imagePath = process.env.PUBLIC_URL+"/images/"+item.image;
     return(
       <Card
         key = {item.id}
@@ -23,7 +23,7 @@ function Body(){
   })
 
   const websiteCards = websites.map(item =>{
-    var imagePath = process.env.PUBLIC_URL+"images/"+item.image;
+    var imagePath = process.env.PUBLIC_URL+"/images/"+item.image;
     return(
       <Card
         key = {item.id}
