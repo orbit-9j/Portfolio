@@ -1,10 +1,10 @@
 export default [
     {
         id: 3,
-        image: "Portfolio.png",
+        image: "portfolio.png",
         title: "Portfolio Website",
         description:"A responsive HTML website made with React JS and styled using Sass (ongoing)",
-        websiteLink: "https://orbit-9j.github.io/Portfolio/index.html",
+        websiteLink: "https://orbit-9j.github.io/Portfolio/",
         githubLink:"https://github.com/orbit-9j/Portfolio",
     },
 
