@@ -44,15 +44,15 @@ function Body(){
         <h1>My Projects</h1>
 
         <hr/>
-        <h3 className="projects__category">Games</h3>
-        <div className="grid">
-          {gameCards}
-        </div>
-    
-        <hr/>
         <h3 className="projects__category">Websites</h3>
         <div className="grid">
           {websiteCards}
+        </div>
+
+        <hr/>
+        <h3 className="projects__category">Other Projects</h3>
+        <div className="grid">
+          {gameCards}
         </div>
     </section>
   );

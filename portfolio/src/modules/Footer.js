@@ -9,9 +9,9 @@ export default function Footer(){
               <h2 className="heading">Skills</h2>
               <div className="skills__list">
                   <ul>
-                      <li>Unity 2D</li>
                       <li>HTML, CSS, SQLPlus, React</li>
                       <li>Python, Java, MATLAB</li>
+                      <li>Unity 2D</li>
                   </ul>
               </div>
           </div>

@@ -13,7 +13,7 @@ export default function Header(){
           <div className="heading">
           <div className="heading__header-text">
                 <Link to="/Portfolio" className="link"><h1>Austin Tian</h1></Link>
-                <h3>Game &amp; Front End Web Developer</h3>
+                <h3>Front End Web Developer</h3>
             </div>
         </div>
         </div>

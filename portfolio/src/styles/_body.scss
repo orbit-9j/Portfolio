@@ -104,8 +104,10 @@ body{
     text-decoration: none;
 
     &:hover{
-        opacity: 70%;
+        /* opacity: 70%; */
         cursor: pointer;
+        background-color: lighten($greyishDark, 10%);
+        color: white;
     }
 
     @include breakpoint-down(small) {

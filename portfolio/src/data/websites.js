@@ -1,5 +1,13 @@
 export default [
     {
+        id: 6,
+        image: "mememaker.png",
+        title: "Meme Maker Website",
+        description:"A responsive HTML website using Javascript and styled using Sass (17/07/2022)",
+        websiteLink: "https://orbit-9j.github.io/meme-maker/",
+        githubLink:"https://github.com/orbit-9j/meme-maker",
+    },
+    {
         id: 3,
         image: "portfolio.png",
         title: "Portfolio Website",

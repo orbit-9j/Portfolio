@@ -257,8 +257,10 @@ body {
 }
 
 .button:hover {
-  opacity: 70%;
+  /* opacity: 70%; */
   cursor: pointer;
+  background-color: #483068;
+  color: white;
 }
 
 @media (max-width: 39.9375em) {
@@ -461,5 +463,27 @@ footer .skills__list > ul > li::marker {
   padding: 0;
   font-family: 'Raleway', sans-serif;
   overflow-wrap: anywhere;
+  /* chrome scrollbar */
+  /* firefox scrollbar */
+  scrollbar-color: #4D2E75 white;
+  /* scrollbar-width: thin; */
+}
+
+* ::-webkit-scrollbar {
+  width: 1rem;
+}
+
+* ::-webkit-scrollbar-track {
+  background: white;
+  border-radius: .625rem;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #4D2E75;
+  border-radius: .625rem;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background: #7e4fba;
 }
 /*# sourceMappingURL=style.css.map */
