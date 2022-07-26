@@ -1,163 +1,170 @@
-body{
-    background-color: $darkest;
+body {
+  background-color: $darkest;
 }
 
-.projects{ 
-    max-width: 59.375rem;
+.projects {
+  color: $lightest;
+  @include body;
+
+  h1 {
+    padding: 0px;
+    color: $lightest;
+
+    text-align: center;
+    @include h1;
+  }
+
+  &__category {
+    font-size: 200%;
+    margin: 1.25rem;
+    margin-left: 0;
+  }
+
+  .grid {
+    display: grid;
+    gap: 3.125rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+
+    .project {
+      background-color: $lightest;
+      border-radius: 0.3125rem;
+      box-shadow: 0px 0.1875rem 0.75rem rgba(0, 0, 0, 1);
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .image {
+        width: 100%;
+        border-radius: 0.3125rem 0.3125rem 0px 0px;
+      }
+
+      &__contents {
+        text-align: center;
+        display: flex;
+        padding: 0.625rem;
+        flex-direction: column;
+        flex: 1 1 auto;
+        align-items: stretch;
+
+        .title {
+          margin-bottom: 0.625rem;
+          font-size: 200%;
+          color: white;
+        }
+
+        .description {
+          color: $darkest;
+          margin-bottom: 0.625rem;
+          margin-top: 0.3125rem;
+        }
+
+        .buttons {
+          display: flex;
+          margin: 0.625rem 0px;
+          flex-direction: row;
+          justify-content: space-evenly;
+
+          @include breakpoint-down(small) {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+.button {
+  background-color: $greyishDark;
+  border-width: 0px;
+  padding: 1.25rem;
+  border-radius: 2.5rem;
+  font-size: 100%;
+  font-weight: 600;
+  transition: 300ms ease-in-out;
+  color: $lightest;
+  text-decoration: none;
+
+  &:hover {
+    /* opacity: 70%; */
+    cursor: pointer;
+    background-color: lighten($greyishDark, 10%);
+    color: white;
+  }
+
+  @include breakpoint-down(small) {
+    &:not(:last-child) {
+      margin-bottom: 0.625rem;
+    }
+  }
+}
+
+.project-desc {
+  p,
+  ul {
+    line-height: 1.5625rem;
+  }
+
+  p {
+    text-indent: 1.875rem;
+  }
+
+  ul {
+    padding-left: 1.875rem;
+  }
+  h2 {
+    padding-top: 1.25rem;
+    padding-bottom: 0.625rem;
+  }
+  h1 {
+    margin-bottom: 3.125rem;
+    @include breakpoint-down(small) {
+      font-size: 200%;
+      margin-bottom: 0.625rem;
+    }
+    @include breakpoint-down(medium) {
+      margin-bottom: 0.625rem;
+    }
+  }
+  .project-button {
+    max-width: 18.75rem;
+    text-align: center;
+    display: block;
     margin: auto;
-    padding:3.125rem;
-    color: $lightest;
-
+    margin-top: 3.125rem;
     @include breakpoint-down(small) {
-        padding:3.125rem 1.25rem 3.125rem 1.25rem;
+      margin-bottom: 0.625rem;
+      width: 100%;
     }
-    
-    h1{ 
-        padding: 0px;
-        color: $lightest;
-
-        text-align: center;
-        @include h1;
-    }
-
-    &__category{
-        font-size: 200%;
-        margin: 1.25rem;
-        margin-left: 0;
-    }
-
-    hr{
-        border: .125rem solid $lightest;
-        border-radius: .125rem;
-        margin-top: 3.125rem;
-    }
-
-    .grid {
-        display: grid; 
-        gap: 3.125rem;
-        grid-template-columns: repeat(2, 1fr);
-
-        @include breakpoint-down(small) {
-            grid-template-columns: 1fr;
-        }
-
-        .project{
-            background-color: $lightest;
-            border-radius: .3125rem;
-            box-shadow: 0px .1875rem .75rem rgba(0, 0, 0, 1);
-            transition: all 300ms ease-in-out;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-
-            .image{
-                width:100%;
-                border-radius: .3125rem .3125rem 0px 0px;
-            }
-
-            &__contents{
-                text-align: center;
-                display: flex;
-                padding: .625rem;
-                flex-direction: column;
-                flex: 1 1 auto;
-                align-items: stretch;
-                
-                .title{
-                    margin-bottom: .625rem;
-                    font-size: 200%;
-                    color: white;
-                }
-
-                .description {
-                    color: $darkest;
-                    margin-bottom: .625rem;
-                    margin-top: .3125rem;
-                }
-
-                .buttons {
-                    display: flex;
-                    margin: .625rem 0px;
-                    flex-direction: row;
-                    justify-content: space-evenly;
-
-                    @include breakpoint-down(small) {
-                        flex-direction: column;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
 
-
-.button{
-    background-color:$greyishDark;
-    border-width: 0px;
-    padding: 1.25rem;
-    border-radius: 2.5rem;
-    font-size: 100%;
-    font-weight: 600;
-    transition: 300ms ease-in-out;
-    color: $lightest;
-    text-decoration: none;
-
-    &:hover{
-        /* opacity: 70%; */
-        cursor: pointer;
-        background-color: lighten($greyishDark, 10%);
-        color: white;
-    }
-
-    @include breakpoint-down(small) {
-        &:not(:last-child){
-        margin-bottom: .625rem;
-        }
-    }
+iframe {
+  height: 100%;
+  width: 100%;
 }
 
-
-.project-desc{
-    p, ul{
-        line-height: 1.5625rem;
-    }
-
-    p{
-        text-indent: 1.875rem;
-    }
-    
-    ul{
-        padding-left: 1.875rem;
-    }
-    h2{
-        padding-top: 1.25rem;
-        padding-bottom: .625rem;
-    }
-    h1{
-        margin-bottom: 3.125rem;
-        @include breakpoint-down(small) {
-            font-size: 200%;
-            margin-bottom: .625rem;
-        }
-        @include breakpoint-down(medium) {
-            margin-bottom: .625rem;
-        }
-    }
-    .project-button{ 
-        width: 18.75rem;
-        text-align: center;
-        display:block; 
-        margin: auto;
-        margin-top: 3.125rem;
-        @include breakpoint-down(small) {
-            margin-bottom: .625rem;
-            width:100%;
-        }
-    }
+hr {
+  border: 0.125rem solid $lightest;
+  border-radius: 0.125rem;
+  margin-top: 3.125rem;
 }
 
-iframe{
-    height: 100%;
-    width: 100%;
+.error {
+  color: $lightest;
+  @include body;
+
+  .error-message {
+    text-align: center;
+    @include h1;
+
+    hr {
+      margin: 3.125rem 0;
+    }
+  }
 }
