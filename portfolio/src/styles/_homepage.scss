@@ -1,0 +1,55 @@
+.projects {
+  @include body;
+
+  &__category {
+    margin: $mediumSpacing;
+    margin-left: 0;
+    color: $light;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $largeSpacing;
+
+    @include breakpoint-down(medium) {
+      gap: $mediumSpacing;
+    }
+
+    @include breakpoint-down(small) {
+      grid-template-columns: 1fr;
+    }
+
+    .project {
+      @include card;
+      transition: all $transitionTime ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      .image {
+        width: 100%;
+      }
+
+      .contents {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: $mediumSpacing;
+
+        .buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: $smallSpacing;
+          width: 100%;
+          align-items: stretch;
+
+          @include breakpoint-down(small) {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}

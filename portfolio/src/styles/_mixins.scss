@@ -31,25 +31,31 @@ $breakpoints-down: (
 }
 //------------------------------------------------------------------------------------------------------------------------
 
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  overflow-wrap: anywhere;
-}
-
-@mixin h1 {
-  font-size: 400%;
-  @include breakpoint-down(small) {
-    font-size: 300%;
+@mixin body {
+  margin: auto;
+  padding: $largeSpacing;
+  @include breakpoint-down(medium) {
+    padding: $mediumSpacing;
   }
 }
 
-@mixin body {
-  max-width: 59.375rem;
-  margin: auto;
-  padding: 3.125rem;
-  @include breakpoint-down(small) {
-    padding: 3.125rem 1.25rem 3.125rem 1.25rem;
+@mixin background-gradient-dark {
+  background: linear-gradient(
+    to right bottom,
+    rgba(17, 7, 31, 0.7),
+    rgba(17, 7, 31, 0.5)
+  ); //$darkest
+}
+
+@mixin card {
+  @include background-gradient-dark;
+  border-radius: $xSmallSpacing;
+  box-shadow: 0px 0.1875rem 0.75rem rgba(0, 0, 0, 1);
+  overflow: hidden;
+  .contents {
+    padding: $mediumSpacing 1.875rem;
+    @include breakpoint-down(medium) {
+      padding: $smallSpacing;
+    }
   }
 }

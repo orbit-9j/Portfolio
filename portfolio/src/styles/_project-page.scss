@@ -1,0 +1,38 @@
+.project-desc {
+  p {
+    text-indent: $mediumSpacing;
+  }
+
+  ul {
+    padding-left: $mediumSpacing;
+  }
+
+  h2 {
+    margin-top: $mediumSpacing;
+    margin-bottom: $smallSpacing;
+  }
+
+  h1 {
+    @include breakpoint-down(medium) {
+      font-size: $mobileHeadingFont;
+      margin-bottom: $smallSpacing;
+    }
+  }
+
+  .textContainer {
+    @include card;
+    background-color: green; //testing
+  }
+
+  .project-button {
+    max-width: $setWidth;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: $largeSpacing;
+    @include breakpoint-down(small) {
+      margin-top: $mediumSpacing;
+      width: 100%;
+    }
+  }
+}

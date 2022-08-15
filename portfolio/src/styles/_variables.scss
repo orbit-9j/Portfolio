@@ -1,6 +1,34 @@
 //colour palette
-$darkest: #1a0a30;
-$greyishDark: #302045;
-$greyishLight: #4d2e75;
-$bright: #6707e6;
-$lightest: #8e67c2;
+/* $darkest: #1a0a30; */
+$darkest: rgb(17, 7, 31);
+$light: rgb(234, 219, 255);
+$accent: rgb(160, 52, 124);
+$lightAccent: lighten($accent, 20%);
+
+//sizes and spacings
+$xLargeSpacing: 6.25rem;
+$largeSpacing: 3.125rem;
+$mediumSpacing: 1.25rem;
+$smallSpacing: 0.625rem;
+$xSmallSpacing: 0.3125rem;
+
+$headingFont: 2.5rem;
+$subheadingFont: 1.375rem;
+$mainFont: 1rem;
+$smallFont: 0.875rem;
+
+$mobileHeadingFont: 1.875rem;
+$mobileSubheadingFont: 1.25rem;
+$mobileMainFont: 0.875rem;
+$mobileSmallFont: 0.875rem;
+
+$setWidth: 12.5rem;
+$navHeight: 2.5rem;
+$largeBorderRadius: 1.875rem;
+
+$transitionTime: 200ms;
+$slowerTransitionTime: 500ms;
+
+$borderWidth: 0.125rem;
+
+$gridGap: 1.875rem;

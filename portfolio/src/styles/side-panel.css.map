@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACT,IAAI,EAAE,CAAC;EACP,QAAQ,EAAE,IAAI;EACd,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,YAAY;EAC7B,UAAU,EAAE,MAAM;CAcnB;;AArBD,AASE,UATQ,CASR,QAAQ,CAAC;EACP,KAAK,EAAE,KAAK;CAIb",
+    "sources": [
+        "side-panel.scss"
+    ],
+    "names": [],
+    "file": "side-panel.css"
+}

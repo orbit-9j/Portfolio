@@ -85,6 +85,7 @@ const ProjectPage = ({ items }) => {
         .map((game, index) => (
           <section key={index} className="projects project-desc">
             <h1>{game.title}</h1>
+            <hr />
             <Carousel IA={game.images} />
             {/* converts the stored string to HTML */}
             <div dangerouslySetInnerHTML={{ __html: game.content }} />

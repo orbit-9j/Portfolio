@@ -44,11 +44,11 @@ function Body() {
       <h1>My Projects</h1>
 
       <hr />
-      <h3 className="projects__category">Websites</h3>
+      <h2 className="projects__category">Websites</h2>
       <div className="grid">{websiteCards}</div>
 
       <hr />
-      <h3 className="projects__category">Other Projects</h3>
+      <h2 className="projects__category">Other Projects</h2>
       <div className="grid">{gameCards}</div>
     </section>
   );
@@ -75,7 +75,7 @@ function Card(Props) {
   return (
     <div className="project">
       <img className="image" src={Props.img} alt="" />
-      <div className="project__contents">
+      <div className="contents">
         <h3 className="title">{Props.title}</h3>
         <p className="description">{Props.desc}</p>
         <div className="buttons">

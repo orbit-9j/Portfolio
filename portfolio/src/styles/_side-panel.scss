@@ -1,0 +1,107 @@
+.sidePanel {
+  @include background-gradient-dark;
+  @include breakpoint-up(medium) {
+    flex: 1;
+    min-width: $setWidth;
+    padding: $largeSpacing;
+  }
+  @include breakpoint-down(medium) {
+    padding: $largeSpacing $mediumSpacing;
+  }
+
+  @include breakpoint-down(small) {
+    padding: 0;
+    height: $navHeight;
+  }
+
+  overflow: auto;
+  text-align: center;
+  transition: $slowerTransitionTime;
+
+  .strip {
+    display: none;
+
+    @include breakpoint-down(small) {
+      color: $light;
+      font-size: $subheadingFont;
+      display: block;
+      height: $navHeight;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+
+      margin: 0;
+      #close {
+        display: none;
+      }
+
+      #open,
+      #close {
+        position: absolute;
+        right: $mediumSpacing;
+      }
+    }
+  }
+
+  #sideContainer {
+    @include breakpoint-down(small) {
+      display: none;
+      transition: $slowerTransitionTime;
+      height: calc(100%-$navHeight);
+      padding: $mediumSpacing;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: $mediumSpacing;
+
+    @include breakpoint-up(medium) {
+      height: 100%;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      gap: $mediumSpacing;
+    }
+    a {
+      text-decoration: none;
+      color: $light;
+      &:hover,
+      &:visited {
+        color: $light;
+      }
+    }
+    h1:hover {
+      color: darken($light, 10%);
+    }
+
+    img {
+      max-height: 1.875rem;
+      max-width: 1.875rem;
+      &:not(:last-child) {
+        margin-right: $xSmallSpacing;
+      }
+    }
+
+    nav {
+      transition: $transitionTime ease-in-out;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $smallSpacing;
+      width: 100%;
+      a {
+        button {
+          width: 100%;
+        }
+      }
+    }
+    .info {
+      h2 {
+        margin-bottom: $smallSpacing;
+      }
+    }
+  }
+}
