@@ -79,7 +79,7 @@ function SidePanel() {
                 title="Python logo"
               ></img>
               <img
-                src={imagePath + "java.png"}
+                src={imagePath + "Java.png"}
                 alt="Java logo"
                 title="Java logo"
               ></img>
