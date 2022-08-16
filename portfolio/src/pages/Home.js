@@ -56,7 +56,7 @@ function Body() {
 
 function LinkDecider(Props) {
   //decides whether to open a project page (for a game) or an external website (for a website)
-  if (Props.type == "game") {
+  if (Props.type === "game") {
     return (
       <Link className="view-button button" to={Props.link} state={Props.id}>
         {Props.button}

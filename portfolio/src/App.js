@@ -5,7 +5,7 @@ import games from "./data/games";
 import ProjectPage from "./pages/Project";
 import Home from "./pages/Home";
 
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const items = games;
@@ -16,7 +16,7 @@ function App() {
           <SidePanel />
           <section id="main" className="mainPanel">
             <Routes>
-              <Route path="/Portfolio" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/:title" element={<ProjectPage items={items} />} />
               <Route
                 path="*"

@@ -47,7 +47,7 @@
     @include breakpoint-down(small) {
       display: none;
       transition: $slowerTransitionTime;
-      height: calc(100%-$navHeight);
+      /* height: calc(100%-$navHeight); */
       padding: $mediumSpacing;
     }
 

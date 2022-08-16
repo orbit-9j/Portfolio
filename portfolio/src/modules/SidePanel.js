@@ -31,7 +31,7 @@ function SidePanel() {
 
       <div id="sideContainer" className="sideContainer">
         <div className="header">
-          <Link to="/Portfolio" className="link">
+          <Link to="/" className="link">
             <h1>Orbit 9-j</h1>
           </Link>
           <h2>Front End Web Developer</h2>

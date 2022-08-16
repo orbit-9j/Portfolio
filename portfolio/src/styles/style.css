@@ -84,7 +84,7 @@
     display: none;
     -webkit-transition: 500ms;
     transition: 500ms;
-    height: calc(100%-$navHeight);
+    /* height: calc(100%-$navHeight); */
     padding: 1.25rem;
   }
 }
