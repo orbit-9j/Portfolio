@@ -64,7 +64,7 @@ ul {
 
 body {
   background-color: $darkest;
-  background-image: url(../../public/images/bg2.jpg);
+  background-image: url(../../public/images/bg.jpg);
   background-size: cover;
   background-position: 0 50%;
   min-height: 100vh;
@@ -77,8 +77,9 @@ body {
 main {
   background: linear-gradient(
     to right bottom,
-    rgba(17, 7, 31, 0.5),
-    rgba(17, 7, 31, 0.3)
+    /* rgba(17, 7, 31, 0.5),
+    rgba(17, 7, 31, 0.3) */ rgba(7, 31, 9, 0.5),
+    rgba(7, 31, 9, 0.3)
   ); //$darkest
   backdrop-filter: blur(1rem);
   height: 95vh;

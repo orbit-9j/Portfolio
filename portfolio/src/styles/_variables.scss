@@ -1,6 +1,14 @@
 //colour palette
 /* $darkest: #1a0a30; */
-$darkest: rgb(17, 7, 31);
+
+//purple
+/* $darkest: rgb(17, 7, 31);
+$light: rgb(234, 219, 255);
+$accent: rgb(160, 52, 124);
+$lightAccent: lighten($accent, 20%); */
+
+//green
+$darkest: rgb(7, 31, 9);
 $light: rgb(234, 219, 255);
 $accent: rgb(160, 52, 124);
 $lightAccent: lighten($accent, 20%);

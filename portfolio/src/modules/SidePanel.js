@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function SidePanel() {
-  var pdfPath = process.env.PUBLIC_URL + "/Austin_Tian_CV.pdf";
+  /* var pdfPath = process.env.PUBLIC_URL + "/CV.pdf"; */
   var imagePath = process.env.PUBLIC_URL + "/images/side-panel/";
   const openSidePanel = () => {
     document.getElementById("sidePanel").style.height = "95vh";
@@ -38,9 +38,9 @@ function SidePanel() {
         </div>
 
         <nav>
-          <a href={pdfPath} target="_blank">
+          {/* <a href={pdfPath} target="_blank">
             <button className="button">CV</button>
-          </a>
+          </a> */}
           <a href="https://github.com/orbit-9j" target="_blank">
             <button className="button">GitHub</button>
           </a>
@@ -51,7 +51,7 @@ function SidePanel() {
           <div className="about">
             <h2 className="heading">About Me</h2>
             <p>
-              Second year computer science student with an interest in graphical
+              Third year computer science student with an interest in graphical
               projects.
             </p>
           </div>
@@ -92,7 +92,7 @@ function SidePanel() {
           </div>
           <div id="contact">
             <h2 className="heading">Contact Me</h2>
-            <p>Austin Tian</p>
+            <p>Rin Tian</p>
             <p>tianek@protonmail.com</p>
             <p>Cardiff, UK</p>
           </div>

@@ -29,7 +29,7 @@ export default [
 
   {
     id: 4,
-    image: "WirelessCommsCW1.png",
+    image: "WC.png",
     title: "Wireless Communication Website",
     description:
       "A pseudo-responsive website using CSS & HTML about the history and uses of wireless communication, made for Web Applications coursework 1 (completed 11/2020)",

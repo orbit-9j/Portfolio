@@ -88,9 +88,9 @@
 
     nav {
       transition: $transitionTime ease-in-out;
-      display: grid;
+      /* display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: $smallSpacing;
+      gap: $smallSpacing; */
       width: 100%;
       a {
         button {

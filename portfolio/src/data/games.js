@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    image: "PD/PD3a.png",
+    image: "PD.png",
     title: "Puzzle Dungeon: a Multiplayer Puzzle Game",
     description:
       "A multiplayer dungeon-crawler puzzle game made with Unity & the Mirror library (completed 16/05/2022)",
@@ -92,7 +92,7 @@ export default [
 
   {
     id: 2,
-    image: "MS/img2.png",
+    image: "MS.png",
     title: "Menace Simulator",
     description:
       "Developed in the CyberSoc-led game jam, a game about being a crow (completed 19/03/2022)",
