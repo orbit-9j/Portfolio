@@ -94,7 +94,7 @@ const ProjectPage = ({ items }) => {
               href={game.githubLink}
               target="_blank"
             >
-              View On Github
+              View Project Page
             </a>
           </section>
         ))}

@@ -175,6 +175,7 @@ $lightAccent: lighten($accent, 20%); */
   }
 }
 
+/* optimise for mobile */
 .project-desc p {
   text-indent: 1.25rem;
 }
@@ -182,7 +183,7 @@ $lightAccent: lighten($accent, 20%); */
   padding-left: 1.25rem;
 }
 .project-desc h2 {
-  margin-top: 1.25rem;
+  /* margin-top: $mediumSpacing; */
   margin-bottom: 0.625rem;
 }
 @media (max-width: 63.9375em) {
@@ -196,7 +197,9 @@ $lightAccent: lighten($accent, 20%); */
   border-radius: 0.3125rem;
   box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
   overflow: hidden;
-  background-color: green;
+  /* background-color: green; //testing */
+  margin-top: 3.125rem;
+  padding: 1.25rem;
 }
 .project-desc .textContainer .contents {
   padding: 1.25rem 1.875rem;

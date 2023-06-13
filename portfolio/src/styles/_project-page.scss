@@ -1,3 +1,5 @@
+/* optimise for mobile */
+
 .project-desc {
   p {
     text-indent: $mediumSpacing;
@@ -8,7 +10,7 @@
   }
 
   h2 {
-    margin-top: $mediumSpacing;
+    /* margin-top: $mediumSpacing; */
     margin-bottom: $smallSpacing;
   }
 
@@ -21,7 +23,9 @@
 
   .textContainer {
     @include card;
-    background-color: green; //testing
+    /* background-color: green; //testing */
+    margin-top: $largeSpacing;
+    padding: $mediumSpacing;
   }
 
   .project-button {

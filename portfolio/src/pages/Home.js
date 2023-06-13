@@ -16,7 +16,8 @@ function Body() {
         desc={item.description}
         button="View Details"
         link={`/${item.title}`}
-        githubLink={item.githubLink}
+        githubLink={item.githubLink ? item.githubLink : null}
+        //githubLink={item.githubLink}
         content={item.content}
         id={item.id}
       />
@@ -48,7 +49,7 @@ function Body() {
       <div className="grid">{websiteCards}</div>
 
       <hr />
-      <h2 className="projects__category">Other Projects</h2>
+      <h2 className="projects__category">Games</h2>
       <div className="grid">{gameCards}</div>
     </section>
   );
@@ -79,14 +80,16 @@ function Card(Props) {
         <h3 className="title">{Props.title}</h3>
         <p className="description">{Props.desc}</p>
         <div className="buttons">
-          {LinkDecider(Props)}
-          <a
-            className="view-button button"
-            href={Props.githubLink}
-            target="_blank"
-          >
-            View On Github
-          </a>
+          {LinkDecider(Props)} {/*project page vs site webpage*/}
+          {Props.githubLink !== null ? (
+            <a
+              className="view-button button"
+              href={Props.githubLink}
+              target="_blank"
+            >
+              View Project Page
+            </a>
+          ) : null}
         </div>
       </div>
     </div>
