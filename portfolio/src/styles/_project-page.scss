@@ -3,6 +3,10 @@
 .project-desc {
   p {
     text-indent: $mediumSpacing;
+
+    @include breakpoint-down(medium) {
+      font-size: $mobileMainFont;
+    }
   }
 
   ul {
@@ -12,12 +16,17 @@
   h2 {
     /* margin-top: $mediumSpacing; */
     margin-bottom: $smallSpacing;
+    @include breakpoint-down(medium) {
+      font-size: $mobileSubheadingFont;
+      margin-bottom: $mediumSpacing;
+    }
   }
 
   h1 {
+    margin-bottom: $largeSpacing;
     @include breakpoint-down(medium) {
       font-size: $mobileHeadingFont;
-      margin-bottom: $smallSpacing;
+      margin-bottom: $mediumSpacing;
     }
   }
 
@@ -26,6 +35,10 @@
     /* background-color: green; //testing */
     margin-top: $largeSpacing;
     padding: $mediumSpacing;
+    @include breakpoint-down(medium) {
+      margin-top: $mediumSpacing;
+      padding: $mediumSpacing $smallSpacing;
+    }
   }
 
   .project-button {

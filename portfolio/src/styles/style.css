@@ -32,7 +32,7 @@ $lightAccent: lighten($accent, 20%); */
 }
 @media (max-width: 39.9375em) {
   .sidePanel .strip {
-    color: rgb(234, 219, 255);
+    color: rgb(244, 255, 239);
     font-size: 1.375rem;
     display: block;
     height: 2.5rem;
@@ -77,13 +77,13 @@ $lightAccent: lighten($accent, 20%); */
 }
 .sidePanel #sideContainer a {
   text-decoration: none;
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
 }
 .sidePanel #sideContainer a:hover, .sidePanel #sideContainer a:visited {
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
 }
 .sidePanel #sideContainer h1:hover {
-  color: #cca8ff;
+  color: #d1ffbc;
 }
 .sidePanel #sideContainer img {
   max-height: 1.875rem;
@@ -118,7 +118,7 @@ $lightAccent: lighten($accent, 20%); */
 .projects__category {
   margin: 1.25rem;
   margin-left: 0;
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
 }
 .projects .grid {
   display: grid;
@@ -179,6 +179,11 @@ $lightAccent: lighten($accent, 20%); */
 .project-desc p {
   text-indent: 1.25rem;
 }
+@media (max-width: 63.9375em) {
+  .project-desc p {
+    font-size: 0.875rem;
+  }
+}
 .project-desc ul {
   padding-left: 1.25rem;
 }
@@ -187,9 +192,18 @@ $lightAccent: lighten($accent, 20%); */
   margin-bottom: 0.625rem;
 }
 @media (max-width: 63.9375em) {
+  .project-desc h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+}
+.project-desc h1 {
+  margin-bottom: 3.125rem;
+}
+@media (max-width: 63.9375em) {
   .project-desc h1 {
     font-size: 1.875rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 1.25rem;
   }
 }
 .project-desc .textContainer {
@@ -207,6 +221,12 @@ $lightAccent: lighten($accent, 20%); */
 @media (max-width: 63.9375em) {
   .project-desc .textContainer .contents {
     padding: 0.625rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .project-desc .textContainer {
+    margin-top: 1.25rem;
+    padding: 1.25rem 0.625rem;
   }
 }
 .project-desc .project-button {
@@ -321,14 +341,14 @@ $lightAccent: lighten($accent, 20%); */
   overflow-wrap: anywhere;
   /* chrome scrollbar */
   /* firefox scrollbar */
-  scrollbar-color: rgb(160, 52, 124) rgb(234, 219, 255);
+  scrollbar-color: rgb(160, 52, 124) rgb(244, 255, 239);
   /* scrollbar-width: thin; */
 }
 * ::-webkit-scrollbar {
   width: 1rem;
 }
 * ::-webkit-scrollbar-track {
-  background: rgb(234, 219, 255);
+  background: rgb(244, 255, 239);
   border-radius: 0.625rem;
 }
 * ::-webkit-scrollbar-thumb {
@@ -341,7 +361,7 @@ $lightAccent: lighten($accent, 20%); */
 
 h1 {
   font-size: 2.5rem;
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
   text-align: center;
 }
 @media (max-width: 63.9375em) {
@@ -364,7 +384,7 @@ h3 {
 
 p,
 ul {
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -388,8 +408,8 @@ body {
 
 main {
   background: linear-gradient(to right bottom, rgba(7, 31, 9, 0.5), rgba(7, 31, 9, 0.3));
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(0.3rem);
+          backdrop-filter: blur(0.3rem);
   height: 95vh;
   width: 95%;
   border-radius: 1.875rem;
@@ -423,7 +443,7 @@ main {
   font-size: 1rem;
   font-weight: 600;
   transition: 200ms ease-in-out;
-  color: rgb(234, 219, 255);
+  color: rgb(244, 255, 239);
   text-decoration: none;
   display: flex;
   justify-content: center;

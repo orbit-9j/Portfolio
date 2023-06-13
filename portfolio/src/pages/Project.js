@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+//---------------carousel------------------
 function Image(Props) {
   var imagePath = process.env.PUBLIC_URL + "/images/";
   var image = imagePath + Props.img;
@@ -74,6 +75,7 @@ function Carousel(Props) {
     </section>
   );
 }
+//---------------carousel------------------
 
 const ProjectPage = ({ items }) => {
   const { title } = useParams(); //receives the title of the page from the link
@@ -85,10 +87,28 @@ const ProjectPage = ({ items }) => {
         .map((game, index) => (
           <section key={index} className="projects project-desc">
             <h1>{game.title}</h1>
-            <hr />
+            {/*  <hr /> */}
             <Carousel IA={game.images} />
-            {/* converts the stored string to HTML */}
-            <div dangerouslySetInnerHTML={{ __html: game.content }} />
+
+            <div>
+              {game.cards.map((card, index) => (
+                <div key={index} className="textContainer">
+                  <h2>{card[0]}</h2>
+                  {card.slice(1).map((content, index) =>
+                    Array.isArray(content) ? (
+                      <ul key={index}>
+                        {content.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p key={index}>{content}</p>
+                    )
+                  )}
+                </div>
+              ))}
+            </div>
+
             <a
               className="view-github project-button button"
               href={game.githubLink}
