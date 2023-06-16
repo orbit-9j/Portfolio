@@ -109,13 +109,15 @@ const ProjectPage = ({ items }) => {
               ))}
             </div>
 
-            <a
-              className="view-github project-button button"
-              href={game.githubLink}
-              target="_blank"
-            >
-              View Project Page
-            </a>
+            {game.githubLink ? (
+              <a
+                className="view-github project-button button"
+                href={game.githubLink}
+                target="_blank"
+              >
+                View Source
+              </a>
+            ) : null}
           </section>
         ))}
     </React.Fragment>

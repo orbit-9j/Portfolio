@@ -7,10 +7,13 @@ import Home from "./pages/Home";
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
+/* import ScrollToTop from "react-router-scroll-top"; */ /* yarn add react-router-scroll-top - supposed to fix the new page loading in previous scrolling position */
+
 function App() {
   const items = games;
   return (
     <Router>
+      {/* <ScrollToTop /> */}
       <main>
         <SidePanel />
         <section id="main" className="mainPanel">

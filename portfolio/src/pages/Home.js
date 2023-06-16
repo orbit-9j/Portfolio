@@ -57,6 +57,7 @@ function Body() {
 
 function LinkDecider(Props) {
   //decides whether to open a project page (for a game) or an external website (for a website)
+
   if (Props.type === "game") {
     return (
       <Link className="view-button button" to={Props.link} state={Props.id}>
@@ -87,7 +88,7 @@ function Card(Props) {
               href={Props.githubLink}
               target="_blank"
             >
-              View Project Page
+              View Source
             </a>
           ) : null}
         </div>

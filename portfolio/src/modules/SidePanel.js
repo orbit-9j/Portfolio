@@ -34,7 +34,7 @@ function SidePanel() {
           <Link to="/" className="link">
             <h1>Orbit 9-j</h1>
           </Link>
-          <h2>Front End Web Developer</h2>
+          <h2>Game & Front End Web Developer</h2>
         </div>
 
         <nav>
@@ -87,6 +87,16 @@ function SidePanel() {
                 src={imagePath + "unity.png"}
                 alt="Unity logo"
                 title="Unity logo"
+              ></img>
+              <img
+                src={imagePath + "Csharp.png"}
+                alt="C# logo"
+                title="C# logo"
+              ></img>
+              <img
+                src={imagePath + "krita.png"}
+                alt="Krita logo"
+                title="Krita logo"
               ></img>
             </div>
           </div>

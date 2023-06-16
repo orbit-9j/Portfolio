@@ -1,10 +1,202 @@
 export default [
   {
+    id: 4,
+    image: "CS.png",
+    title: "Cyberscape: a Cybersecurity RPG",
+    description:
+      "A dissertation project that teaches cybersecurity to novices, using the Octalysis framework. Made with Unity C# + Ink scripting language. The prequel to Psychodyssey. (completed 12/05/2023)",
+
+    images: [
+      {
+        id: 17,
+        active: true,
+        title: "main menu",
+        image: "CS/CS17.png",
+      },
+      {
+        id: 9,
+        active: false,
+        title: "controls panel",
+        image: "CS/CS9.png",
+      },
+      {
+        id: 13,
+        active: false,
+        title: "in-game dialogue",
+        image: "CS/CS13.png",
+      },
+      {
+        id: 18,
+        active: false,
+        title: "enter player name screen",
+        image: "CS/CS18.png",
+      },
+      {
+        id: 19,
+        active: false,
+        title: "gameplay",
+        image: "CS/CS19.png",
+      },
+      {
+        id: 20,
+        active: false,
+        title: "gameplay",
+        image: "CS/CS20.png",
+      },
+      {
+        id: 21,
+        active: false,
+        title: "gameplay",
+        image: "CS/CS21.png",
+      },
+      {
+        id: 1,
+        active: false,
+        title: "intro level layout",
+        image: "CS/CS1.png",
+      },
+      {
+        id: 14,
+        active: false,
+        title: "dialogue choices",
+        image: "CS/CS14.png",
+      },
+      {
+        id: 11,
+        active: false,
+        title: "cipher brute force panel",
+        image: "CS/CS11.png",
+      },
+      {
+        id: 22,
+        active: false,
+        title: "ciphers battle",
+        image: "CS/CS22.png",
+      },
+      {
+        id: 23,
+        active: false,
+        title: "ciphers battle",
+        image: "CS/CS23.png",
+      },
+      {
+        id: 2,
+        active: false,
+        title: "ciphers level layout",
+        image: "CS/CS2.png",
+      },
+
+      {
+        id: 8,
+        active: false,
+        title: "phishing battle panel",
+        image: "CS/CS8.png",
+      },
+      {
+        id: 10,
+        active: false,
+        title: "keypad panel",
+        image: "CS/CS10.png",
+      },
+      {
+        id: 24,
+        active: false,
+        title: "gameplay",
+        image: "CS/CS24.png",
+      },
+      {
+        id: 3,
+        active: false,
+        title: "social engineering level layout",
+        image: "CS/CS3.png",
+      },
+      {
+        id: 12,
+        active: false,
+        title: "final battle",
+        image: "CS/CS12.png",
+      },
+      {
+        id: 4,
+        active: false,
+        title: "final level layout",
+        image: "CS/CS4.png",
+      },
+      {
+        id: 5,
+        active: false,
+        title: "character portraits",
+        image: "CS/CS5.png",
+      },
+      {
+        id: 6,
+        active: false,
+        title: "higher res character sprites",
+        image: "CS/CS6.png",
+      },
+      {
+        id: 7,
+        active: false,
+        title: "character sprites",
+        image: "CS/CS7.png",
+      },
+
+      {
+        id: 15,
+        active: false,
+        title: "octalysis scores",
+        image: "CS/CS15.png",
+      },
+      {
+        id: 16,
+        active: false,
+        title: "player enjoyment",
+        image: "CS/CS16.png",
+      },
+    ],
+    cards: [
+      [
+        "Project summary",
+        "Cyberscape is a dissertation project developed over the span of 12 weeks. The aim of Cyberscape is to gamify the learning of cybersecurity, building upon the Octalysis gamification framework. The game covers the digital, social, and physical aspects of cybersecurity, with a strong focus on encryption (Caesar cipher) and social engineering (including phishing). ",
+      ],
+      [
+        "Plot",
+        "The story follows a character informally nicknamed Mortimer, a psychology student that lacks computer literacy skills, on a quest to infiltrate an evil ruler’s base. When Mortimer accidentally installs a trojan program posing as and illegal copy of a video game, their video game console is freed from internet-wide robot mind control. The console guides them through cybersecurity concepts as they explore the villain’s catgirl lab, and helps defeat Long Dusk, the multi-billionaire who became the president of the world. The victory frees enslaved alien robots from mind control and allows them to go back to their home planet, ending a 10-year-long space war and allowing the citizens of Subterropolis to emerge from the underground.",
+      ],
+      [
+        "Features",
+        [
+          "The player completes a variety of puzzles with the use of their games console, and battles enemies to advance to the next level.",
+          "The puzzles teach the attack aspect of cybersecurity and the battle teach the player how to defend themselves.",
+          "The player can interact with NPCs and objects to gain information about the world.",
+          "The player can name the main character any name they want.",
+          "The player experiences the story through dialogue and dialogue choices.",
+        ],
+      ],
+      [
+        "User testing",
+        "Before user testing, I applied for ethical approval from Cardiff University's ethic's committee to allow the collection of the participants' programme of study.",
+        "I carried out user testing with 5 participants, who were then given a Microsoft Forms survey to fill out. The survey assessed the game's enjoyment and effectiveness at teaching cybersecurity. I received valuable feedback about features that need to be changed or added, as well as the game's success at adopting the Octalysis framework. ",
+      ],
+      [
+        "Reflection",
+        "By coding the game I extensively applied what I learned in the Object Orientation And Data Structures module, making me more comfortable with the concept of inheritance. Because I aimed to create a complete game, I had plenty of practice with the Unity 2D game engine and the C# programming language, making me less reliant on online tutorials.",
+        "I really enjoyed working with the game assets. While most of the assets were taken from itch.io, I had to modify some of them to change their colour to fit with the game's purple and yellow theme. I also drew some character sprites and all of their portraits using Krita. The characters are inspired by my friends who expressed interest in becoming part of the story.",
+        "I also had fun creating the game world and adding flavourtext. I wanted my world to fit into the uncanny valley, with weird and bizarre elements present in an otherwise ordinary and familiar setting to reflect the strangeness of the game's story. I wanted to make a game that doesn't take itself seriously, so I added a character that breaks the fourth wall and points out the strangeness of the world that the other characters fail to notice. I believe that gamifying a concept is only one half of making it enjoyable, and the other half requires the players to connect with the game world and the characters.",
+        "This is the biggest scope game I have ever made, and the only game I fully completed. I am very proud of how it turned out.",
+      ],
+      [
+        "Source code",
+        "I want to tidy up and optimise the source code before releasing it to the public, and there are several features that i want to add or fix before I am fully happy with the game. I plan to upload the game to itch.io in the future, after implementing the changes suggested during user testing. ",
+      ],
+    ],
+  },
+  {
     id: 3,
     image: "PO.png",
     title: "Psychodyssey",
     description:
-      "A research project developed for the Design Thinking module that aims to design an effective psychological horror game. Made using miro and Figma (completed 10/01/2023)",
+      "A research project developed for the Design Thinking module that aims to design an effective psychological horror game. Made using miro, Krita, and Figma. Scored 83/100 in assessment. (completed 10/01/2023)",
     githubLink:
       "https://miro.com/app/board/uXjVPMzhjBo=/?share_link_id=722803847643",
     images: [
@@ -109,7 +301,7 @@ export default [
     image: "PD.png",
     title: "Puzzle Dungeon: a Multiplayer Puzzle Game",
     description:
-      "A multiplayer dungeon-crawler puzzle game made with Unity & the Mirror library for a client group project(completed 16/05/2022)",
+      "A multiplayer dungeon-crawler puzzle game made with Unity C# & the Mirror library for a client group project. Scored 66/100 in assessment (completed 16/05/2022)",
     githubLink: "https://github.com/orbit-9j/Puzzle-Dungeon",
     images: [
       {
@@ -245,7 +437,7 @@ export default [
     image: "MS.png",
     title: "Menace Simulator",
     description:
-      "Developed solo in the CyberSoc-led game jam, a game about being a crow (completed 19/03/2022)",
+      "Developed solo in the CyberSoc-led game jam, a game about being a crow. Made using Unity C# (completed 19/03/2022)",
     githubLink: "https://github.com/orbit-9j/Menace-Simulator",
     images: [
       {
@@ -275,13 +467,13 @@ export default [
       {
         id: "5",
         active: false,
-        title: "crows shitting sprite",
+        title: "crows pooping sprite",
         image: "MS/img4.png",
       },
       {
         id: "6",
         active: false,
-        title: "shit landed on ground sprite",
+        title: "poop landed on ground sprite",
         image: "MS/img5.png",
       },
       {
@@ -294,14 +486,14 @@ export default [
         id: "8",
         active: false,
         title:
-          "crows have defeated the reaper: kill count increase and reaper is gone",
+          "crows have defeated the reaper: kill count increased and reaper is gone",
         image: "MS/img7.png",
       },
     ],
     cards: [
       [
         "Project Overview",
-        "Have you ever wondered what it is like to be a crow? Well now you have the answer! Fly above a magic garden, make crow friends, and lead your murder into a one-sided battle with death itself. Not even the grim reapers can survive the never-ending blasts of bird shit - assert dominance over mortality!",
+        "Have you ever wondered what it is like to be a crow? Well now you have the answer! Fly above a magic garden, make crow friends, and lead your murder into a one-sided battle with death itself. Not even the grim reapers can survive the never-ending blasts of bird poop - assert dominance over mortality!",
         "This singleplayer game was made for a 5-hour game jam hosted by CyberSoc in collaboration with my sister and with the help of free pizza. This is a top-down 2-D shooter game where you are a crow who poops on grim reapers using the space button to evade your own demise. When in proximity of a sitting crow, the crow is added to your murder, increasing your poop firepower. A kill counter is incremented with every reaper death. Currently there is no win condition and only one level due to the limited time I had to develop this game.",
       ],
       [
