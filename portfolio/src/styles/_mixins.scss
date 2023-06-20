@@ -42,9 +42,9 @@ $breakpoints-down: (
 @mixin background-gradient-dark {
   background: linear-gradient(
     to right bottom,
-    rgba(17, 7, 31, 0.7),
-    rgba(17, 7, 31, 0.5)
-  ); //$darkest
+    rgba(red($darkest), green($darkest), blue($darkest), 0.8),
+    rgba(red($darkest), green($darkest), blue($darkest), 0.6)
+  );
 }
 
 @mixin card {

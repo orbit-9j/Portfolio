@@ -42,14 +42,16 @@ function SidePanel() {
             <button className="button">CV</button>
           </a> */}
           <a href="https://github.com/orbit-9j" target="_blank">
-            <button className="button">GitHub</button>
+            <button className="button button-primary">GitHub</button>
           </a>
-          {/* <a href="#"><button>About me</button></a> */}
+          <Link to="/About">
+            <button className="button button-secondary">About Me</button>
+          </Link>
         </nav>
 
         <div className="info">
           <div className="about">
-            <h2 className="heading">About Me</h2>
+            <h2 className="heading">Profile</h2>
             <p>
               Third year computer science student with an interest in graphical
               projects.

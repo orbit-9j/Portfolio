@@ -4,6 +4,7 @@ import games from "./data/games";
 
 import ProjectPage from "./pages/Project";
 import Home from "./pages/Home";
+import AboutMe from "./pages/About";
 
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,13 +14,14 @@ function App() {
   const items = games;
   return (
     <Router>
-      {/* <ScrollToTop /> */}
+      {/* <ScrollToTop> */}
       <main>
         <SidePanel />
         <section id="main" className="mainPanel">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:title" element={<ProjectPage items={items} />} />
+            <Route path="/About" element={<AboutMe />} />
             <Route
               path="*"
               element={
@@ -35,6 +37,7 @@ function App() {
           </Routes>
         </section>
       </main>
+      {/* </ScrollToTop> */}
     </Router>
   );
 }

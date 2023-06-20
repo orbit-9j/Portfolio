@@ -48,6 +48,10 @@
           @include breakpoint-down(small) {
             grid-template-columns: 1fr;
           }
+
+          a {
+            text-decoration: none;
+          }
         }
       }
     }

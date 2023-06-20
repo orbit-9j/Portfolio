@@ -60,13 +60,21 @@ function LinkDecider(Props) {
 
   if (Props.type === "game") {
     return (
-      <Link className="view-button button" to={Props.link} state={Props.id}>
+      <Link
+        className="view-button button button-primary"
+        to={Props.link}
+        state={Props.id}
+      >
         {Props.button}
       </Link>
     );
   } else {
     return (
-      <a className="view-button button" href={Props.siteLink} target="_blank">
+      <a
+        className="view-button button button-primary"
+        href={Props.siteLink}
+        target="_blank"
+      >
         {Props.button}
       </a>
     );
@@ -83,12 +91,8 @@ function Card(Props) {
         <div className="buttons">
           {LinkDecider(Props)} {/*project page vs site webpage*/}
           {Props.githubLink !== null ? (
-            <a
-              className="view-button button"
-              href={Props.githubLink}
-              target="_blank"
-            >
-              View Source
+            <a className="view-button" href={Props.githubLink} target="_blank">
+              <button className="button button-secondary">View Source</button>
             </a>
           ) : null}
         </div>
