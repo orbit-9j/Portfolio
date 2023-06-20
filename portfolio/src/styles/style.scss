@@ -105,7 +105,7 @@ main {
 }
 
 .button {
-  padding: $mediumSpacing;
+  padding: $smallSpacing;
   border-radius: $largeBorderRadius;
   font-size: $mainFont;
   font-weight: 600;
@@ -126,7 +126,7 @@ main {
     //transition doesn't work now
   }
 
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     &:not(:last-child) {
       margin-bottom: 0.625rem;
     }

@@ -166,12 +166,19 @@ $lightAccent: lighten($accent, 20%); */
   flex-direction: column;
   gap: 1.25rem;
 }
+.projects .grid .project .contents .timestamp {
+  color: grey;
+}
+.projects .grid .project .contents .title {
+  margin-bottom: 0.3125rem;
+}
 .projects .grid .project .contents .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.625rem;
   width: 100%;
   align-items: stretch;
+  justify-items: stretch;
 }
 @media (max-width: 39.9375em) {
   .projects .grid .project .contents .buttons {
@@ -180,6 +187,9 @@ $lightAccent: lighten($accent, 20%); */
 }
 .projects .grid .project .contents .buttons a {
   text-decoration: none;
+}
+.projects .grid .project .contents .buttons a button {
+  width: 100%;
 }
 
 /* optimise for mobile */
@@ -443,7 +453,7 @@ main {
 }
 
 .button {
-  padding: 1.25rem;
+  padding: 0.625rem;
   border-radius: 1.875rem;
   font-size: 1rem;
   font-weight: 600;
@@ -458,7 +468,7 @@ main {
   cursor: pointer;
   background: linear-gradient(to right bottom, #963f0d, rgba(150, 63, 13, 0.5));
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   .button {
     padding: 0.625rem;
     font-size: 0.875rem;

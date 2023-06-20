@@ -20,6 +20,7 @@ function Body() {
         //githubLink={item.githubLink}
         content={item.content}
         id={item.id}
+        timestamp={item.timestamp}
       />
     );
   });
@@ -36,6 +37,7 @@ function Body() {
         button="Go To Site"
         siteLink={item.websiteLink}
         githubLink={item.githubLink}
+        timestamp={item.timestamp}
       />
     );
   });
@@ -86,7 +88,10 @@ function Card(Props) {
     <div className="project">
       <img className="image" src={Props.img} alt="" />
       <div className="contents">
-        <h3 className="title">{Props.title}</h3>
+        <div>
+          <h3 className="title">{Props.title}</h3>
+          <p className="timestamp">{Props.timestamp}</p>
+        </div>
         <p className="description">{Props.desc}</p>
         <div className="buttons">
           {LinkDecider(Props)} {/*project page vs site webpage*/}

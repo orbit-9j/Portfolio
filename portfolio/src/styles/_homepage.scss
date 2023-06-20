@@ -38,12 +38,21 @@
         flex-direction: column;
         gap: $mediumSpacing;
 
+        .timestamp {
+          color: grey;
+        }
+
+        .title {
+          margin-bottom: $xSmallSpacing;
+        }
+
         .buttons {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: $smallSpacing;
           width: 100%;
           align-items: stretch;
+          justify-items: stretch;
 
           @include breakpoint-down(small) {
             grid-template-columns: 1fr;
@@ -51,6 +60,9 @@
 
           a {
             text-decoration: none;
+            button {
+              width: 100%;
+            }
           }
         }
       }

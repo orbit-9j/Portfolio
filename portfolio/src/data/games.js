@@ -4,8 +4,8 @@ export default [
     image: "CS.png",
     title: "Cyberscape: a Cybersecurity RPG",
     description:
-      "A dissertation project that teaches cybersecurity to novices, using the Octalysis framework. Made with Unity C# + Ink scripting language. The prequel to Psychodyssey. (completed 12/05/2023)",
-
+      "A dissertation project that teaches cybersecurity to novices, using the Octalysis framework. Made with Unity C# + Ink scripting language. The prequel to Psychodyssey.",
+    timestamp: "completed 12/05/2023",
     images: [
       {
         id: 17,
@@ -196,7 +196,8 @@ export default [
     image: "PO.png",
     title: "Psychodyssey",
     description:
-      "A research project developed for the Design Thinking module that aims to design an effective psychological horror game. Made using miro, Krita, and Figma. Scored 83/100 in assessment. (completed 10/01/2023)",
+      "A research project developed for the Design Thinking module that aims to design an effective psychological horror game. Made using miro, Krita, and Figma. Scored 83/100 in assessment.",
+    timestamp: "completed 10/01/2023",
     githubLink:
       "https://miro.com/app/board/uXjVPMzhjBo=/?share_link_id=722803847643",
     images: [
@@ -301,7 +302,8 @@ export default [
     image: "PD.png",
     title: "Puzzle Dungeon: a Multiplayer Puzzle Game",
     description:
-      "A multiplayer dungeon-crawler puzzle game made with Unity C# & the Mirror library for a client group project. Scored 66/100 in assessment (completed 16/05/2022)",
+      "A multiplayer dungeon-crawler puzzle game made with Unity C# & the Mirror library for a client group project. Scored 66/100 in assessment.",
+    timestamp: "completed 16/05/2022",
     githubLink: "https://github.com/orbit-9j/Puzzle-Dungeon",
     images: [
       {
@@ -437,7 +439,8 @@ export default [
     image: "MS.png",
     title: "Menace Simulator",
     description:
-      "Developed solo in the CyberSoc-led game jam, a game about being a crow. Made using Unity C# (completed 19/03/2022)",
+      "Developed solo in the CyberSoc-led game jam, a game about being a crow. Made using Unity C#.",
+    timestamp: "completed 19/03/2022",
     githubLink: "https://github.com/orbit-9j/Menace-Simulator",
     images: [
       {
