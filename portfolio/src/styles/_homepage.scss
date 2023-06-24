@@ -46,6 +46,11 @@
           margin-bottom: $xSmallSpacing;
         }
 
+        .score {
+          margin-top: $xSmallSpacing;
+          color: grey;
+        }
+
         .buttons {
           display: grid;
           grid-template-columns: 1fr 1fr;

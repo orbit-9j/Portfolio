@@ -1,5 +1,6 @@
 import games from "../data/games";
 import websites from "../data/websites";
+import other from "../data/other";
 
 import { Link } from "react-router-dom";
 
@@ -14,6 +15,7 @@ function Body() {
         img={imagePath}
         title={item.title}
         desc={item.description}
+        score={item.score ? item.score : null}
         button="View Details"
         link={`/${item.title}`}
         githubLink={item.githubLink ? item.githubLink : null}
@@ -34,9 +36,29 @@ function Body() {
         img={imagePath}
         title={item.title}
         desc={item.description}
+        score={item.score ? item.score : null}
         button="Go To Site"
         siteLink={item.websiteLink}
         githubLink={item.githubLink}
+        timestamp={item.timestamp}
+      />
+    );
+  });
+
+  const otherCards = other.map((item) => {
+    var imagePath = process.env.PUBLIC_URL + "/images/" + item.image;
+    var pdfPath = process.env.PUBLIC_URL + "/" + item.path;
+    return (
+      <Card
+        key={item.id}
+        type="other"
+        img={imagePath}
+        title={item.title}
+        desc={item.description}
+        score={item.score ? item.score : null}
+        button="View Details"
+        siteLink={pdfPath}
+        githubLink={item.githubLink ? item.githubLink : null}
         timestamp={item.timestamp}
       />
     );
@@ -53,6 +75,10 @@ function Body() {
       <hr />
       <h2 className="projects__category">Games</h2>
       <div className="grid">{gameCards}</div>
+
+      <hr />
+      <h2 className="projects__category">Other Projects</h2>
+      <div className="grid">{otherCards}</div>
     </section>
   );
 }
@@ -92,7 +118,13 @@ function Card(Props) {
           <h3 className="title">{Props.title}</h3>
           <p className="timestamp">{Props.timestamp}</p>
         </div>
-        <p className="description">{Props.desc}</p>
+        <div>
+          <p className="description">{Props.desc}</p>
+          {Props.score !== null ? (
+            <p className="score">Scored {Props.score} in assessment</p>
+          ) : null}
+        </div>
+
         <div className="buttons">
           {LinkDecider(Props)} {/*project page vs site webpage*/}
           {Props.githubLink !== null ? (

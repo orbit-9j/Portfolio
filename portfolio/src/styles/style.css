@@ -172,6 +172,10 @@ $lightAccent: lighten($accent, 20%); */
 .projects .grid .project .contents .title {
   margin-bottom: 0.3125rem;
 }
+.projects .grid .project .contents .score {
+  margin-top: 0.3125rem;
+  color: grey;
+}
 .projects .grid .project .contents .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;

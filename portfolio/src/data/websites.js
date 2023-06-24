@@ -35,7 +35,8 @@ export default [
     image: "WC.png",
     title: "Wireless Communication Website",
     description:
-      "A pseudo-responsive website using CSS & HTML about the history and uses of wireless communication, made for Web Applications coursework 1. Scored 10/10 in assessment.",
+      "A pseudo-responsive website using CSS & HTML about the history and uses of wireless communication, made for Web Applications coursework 1.",
+    score: "10/10",
     websiteLink: "https://orbit-9j.github.io/WirelessCommsWebsite/index.html",
     githubLink: "https://github.com/orbit-9j/WirelessCommsWebsite",
     timestamp: "completed 11/2020",
