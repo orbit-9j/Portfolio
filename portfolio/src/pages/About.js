@@ -13,6 +13,7 @@ export default function AboutMe() {
           <li>Pixel art top-down RPG games</li>
           <li>Satirical and absurdist humour</li>
           <li>Skeuomorphism and glassmorphism</li>
+          <li>Colours: black, green, orange, purple</li>
         </ul>
       </div>
       <div className="textContainer">

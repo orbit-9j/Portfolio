@@ -42,8 +42,8 @@ $breakpoints-down: (
 @mixin background-gradient-dark {
   background: linear-gradient(
     to right bottom,
-    rgba(red($darkest), green($darkest), blue($darkest), 0.8),
-    rgba(red($darkest), green($darkest), blue($darkest), 0.6)
+    rgba(red($light), green($light), blue($light), 0.05),
+    rgba(red($light), green($light), blue($light), 0.035)
   );
 }
 

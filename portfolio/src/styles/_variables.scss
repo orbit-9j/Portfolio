@@ -1,17 +1,10 @@
-//colour palette
-/* $darkest: #1a0a30; */
-
-//purple
-/* $darkest: rgb(17, 7, 31);
-$light: rgb(234, 219, 255);
-$accent: rgb(160, 52, 124);
-$lightAccent: lighten($accent, 20%); */
-
 //green
-$darkest: rgb(10, 14, 11);
+$darkest: rgb(16, 17, 16);
 $light: rgb(244, 255, 239);
-$accent: rgb(220, 93, 19);
-$lightAccent: lighten($accent, 20%);
+$accent: rgb(255, 113, 30);
+$lightAccent: lighten($accent, 10%);
+//$lightDark: lighten($darkest, 10%);
+$transparent: rgba(red($light), green($light), blue($light), 0.08);
 
 //sizes and spacings
 $xLargeSpacing: 6.25rem;
@@ -32,6 +25,7 @@ $mobileSmallFont: 0.875rem;
 
 $setWidth: 12.5rem;
 $navHeight: 2.5rem;
+$borderRadius: 0.625rem;
 $largeBorderRadius: 1.875rem;
 
 $transitionTime: 200ms;
