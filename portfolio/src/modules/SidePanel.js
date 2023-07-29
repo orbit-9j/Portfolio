@@ -53,7 +53,7 @@ function SidePanel() {
           <div className="about">
             <h2 className="heading">Profile</h2>
             <p>
-              Third year computer science student with an interest in graphical
+              Recent BSc Computer Science graduate with an interest in graphical
               projects.
             </p>
           </div>
