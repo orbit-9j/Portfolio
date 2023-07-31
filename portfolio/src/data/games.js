@@ -162,6 +162,12 @@ export default [
         "Cyberscape is a dissertation project developed over the span of 12 weeks. The aim of Cyberscape is to gamify the learning of cybersecurity, building upon the Octalysis gamification framework. The game covers the digital, social, and physical aspects of cybersecurity, with a strong focus on encryption (Caesar cipher) and social engineering (including phishing). ",
       ],
       [
+        "Client Requirements and Process",
+        "I chose my dissertation project by reading through a range of project briefs from different members of teaching staff at Cardiff University. The project 'RPG to teach a computer science topic' caught my eye as an aspiring game developer. After an initial meeting to narrow down the topic of the game, Sylwia Polberg, my client and supervisor, has provided me with a set of criteria for the game. Cyberscape had to have:  ",
+        ["Puzzles", "Battles", "Information about cybersecurity"],
+        "In my initial report, I wrote a timeplan for the project to set milestones to work towards over the 2 months of development. We had several meetings throughout development to discuss the progress and sort out ethical approval documents for user testing.",
+      ],
+      [
         "Plot",
         "The story follows a character informally nicknamed Mortimer, a psychology student that lacks computer literacy skills, on a quest to infiltrate an evil ruler’s base. When Mortimer accidentally installs a trojan program posing as and illegal copy of a video game, their video game console is freed from internet-wide robot mind control. The console guides them through cybersecurity concepts as they explore the villain’s catgirl lab, and helps defeat Long Dusk, the multi-billionaire who became the president of the world. The victory frees enslaved alien robots from mind control and allows them to go back to their home planet, ending a 10-year-long space war and allowing the citizens of Subterropolis to emerge from the underground.",
       ],

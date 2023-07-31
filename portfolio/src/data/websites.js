@@ -29,6 +29,16 @@ export default [
     githubLink: "https://github.com/orbit-9j/Portfolio",
     timestamp: "Ongoing",
   },
+  {
+    id: 7,
+    image: "CardMatch.png",
+    title: "Card Match draft",
+    description:
+      "A card game website idea made with React JS, styled using Sass, and hosted on GitHub Pages.",
+    websiteLink: "https://orbit-9j.github.io/card-match/",
+    githubLink: "https://github.com/orbit-9j/card-match",
+    timestamp: "Paused 30/07/2023",
+  },
 
   {
     id: 4,

@@ -194,6 +194,7 @@
 /* optimise for mobile */
 .project-desc p {
   text-indent: 1.25rem;
+  margin: 0;
 }
 @media (max-width: 63.9375em) {
   .project-desc p {
@@ -205,12 +206,10 @@
 }
 .project-desc h2 {
   /* margin-top: $mediumSpacing; */
-  margin-bottom: 0.625rem;
 }
 @media (max-width: 63.9375em) {
   .project-desc h2 {
     font-size: 1.25rem;
-    margin-bottom: 1.25rem;
   }
 }
 .project-desc h1 {
@@ -230,6 +229,8 @@
   /* background-color: green; //testing */
   margin-top: 3.125rem;
   padding: 1.25rem;
+  display: grid;
+  gap: 0.625rem;
 }
 .project-desc .textContainer .contents {
   padding: 1.25rem 1.875rem;
