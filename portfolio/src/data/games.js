@@ -192,10 +192,12 @@ export default [
         "I really enjoyed working with the game assets. While most of the assets were taken from itch.io, I had to modify some of them to change their colour to fit with the game's purple and yellow theme. I also drew some character sprites and all of their portraits using Krita. The characters are inspired by my friends who expressed interest in becoming part of the story.",
         "I also had fun creating the game world and adding flavourtext. I wanted my world to fit into the uncanny valley, with weird and bizarre elements present in an otherwise ordinary and familiar setting to reflect the strangeness of the game's story. I wanted to make a game that doesn't take itself seriously, so I added a character that breaks the fourth wall and points out the strangeness of the world that the other characters fail to notice. I believe that gamifying a concept is only one half of making it enjoyable, and the other half requires the players to connect with the game world and the characters.",
         "This is the biggest scope game I have ever made, and the only game I fully completed. I am very proud of how it turned out.",
+        "One thing I'm really disappointed about however is that I couldn't finish my final report. I gave myself a week to write it, and at the end reached around 17k words. However, this was not enough to fully explain many aspects of this project and I left several sections only partially written. As the report was the only part of the project marked (the code did not count at all), I believe that my grade could have been much higher if I had given myself more time to finish the report.",
       ],
       [
         "Source code",
         "As this was a dissertation project done within a limited timeframe, I want to tidy up and optimise the source code in the future. There are several features that I want to add or fix before I am fully happy with the game. I plan to upload the game to itch.io after implementing the changes suggested during user testing. ",
+        "I ran into an issue when building the game, where collisions and some scripts were not working correctly in the build but worked fine in the Unity game window. This limited the extend of user testing I could do because I had to invite users to play the game directly on my machine from the Unity window.",
       ],
     ],
   },
@@ -204,11 +206,17 @@ export default [
     image: "PO.png",
     title: "Psychodyssey",
     description:
-      "A research project developed for the Design Thinking module that aims to design an effective psychological horror game. Made using miro, Krita, and Figma.",
+      "A research project and prototype developed for the Design Thinking module that aims to design an effective psychological horror game. Made using Miro, Krita, and Figma.",
     score: "83/100",
     timestamp: "Completed 10/01/2023",
     githubLink:
       "https://miro.com/app/board/uXjVPMzhjBo=/?share_link_id=722803847643",
+    extraSources: [
+      {
+        "Figma board":
+          "https://www.figma.com/file/pyHXkKKN4cn5MtXx4WpAHR/design-cw?t=gjgzJrZM4Dd0YaZP-1",
+      },
+    ],
     images: [
       {
         id: "1",
@@ -409,6 +417,16 @@ export default [
         ],
         "The players must complete all the puzzles in a level to proceed to the next level. There are 3 levels: green, orange, and purple. Each level has a different room shape to reflect the domain it is based in. The Human dungeon is an orange castle, the Wizard dungeon is a purple maze, and the Monster dungeon is a green cave. This game was a proof of concept and therefore only one level has been made.",
         "The game is hosted on a player's machine and can be accessed by other players using the host's IP address.",
+      ],
+      [
+        "Client Requirements and Process",
+        "Frank Langbein, our client, has given us just one criteria for the project, which was 'social game'. We tried to get him to elaborate on what exactly he wants to see, but he refused. With the freedom to make virtually any game we wanted, we settled for an old-school dungeon crawler game. We interpreted 'social game' to mean a game with multiplayer features and potentially a way for the players to communicate (i.e. chat, which was scrapped due to time constraints). None of us have ever done game development or used a game engine before, so we were overwhelmed by this task. In hindsight, we should have probably thought outside the box and come up with something simpler.",
+        "Throughout development we had 2 meetings with frank. In the first meeting we presented our initial ideas and plans for the game. In the second meeting we presented the final game, as well as our reflections. Due to the team's lack of experience with game development and the time constraints, we couldn't include or polish many of the features we planned. Frank gave us feedback on our final presentation, and the thing that stood out to me was that he didn't like that we focused on what could have been. Frank said our final product ticks off his criteria and therefore satisfies him, and we should have spent more time celebrating the few things that we did accomplish. I found this to be a valuable lesson in team morale.",
+      ],
+      [
+        "Teamwork and Leadership",
+        "Originally, the team had 6 members, one of which was our leader. However, we naturally split into 2 subteams, with one working on the report and presentation, and the other working on the game itself. I believed that the original leader wasn't very good at his position, and our progress was going slowly. I took initiative in the game's development and created the menu and a draft of the map generation. Being the first and only person to develop the game at that time, I took the reigns of the game dev side of the project. I set up a meeting where I explained to the rest of my subteam how the code works so they could jump in and add onto it. Due to the initial disorganisation of the wider team, the 3 of us had to complete as much of the game as possible in an incredibly short time period (we completed the main bulk of it in 3 days, please don't tell Frank). ",
+        "From that point on, progress on the game had significantly picked up pace. Working in a smaller team certainly helped, in addition to us naturally taking up roles according to our strengths. I think that if I had taken the initiative sooner, we would have been able to make a lot more progress. Before this project I have never really engaged in leadership, preferring to complete tasks that were assigned to me on my own. Now I know that I have the ability to make a difference in the team and I am looking forward to applying and improving my leadership skills in future projects.",
       ],
       [
         "My contribution to the project",

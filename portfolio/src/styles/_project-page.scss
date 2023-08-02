@@ -44,15 +44,30 @@
     }
   }
 
-  .project-button {
-    max-width: $setWidth;
-    text-align: center;
-    display: block;
-    margin: auto;
+  .button-wrapper {
     margin-top: $largeSpacing;
+    display: flex;
+    justify-content: center;
+    gap: $mediumSpacing;
+
     @include breakpoint-down(small) {
+      flex-wrap: wrap;
       margin-top: $mediumSpacing;
-      width: 100%;
+      gap: $xSmallSpacing;
+    }
+
+    a {
+      padding: 0;
+    }
+
+    .project-button {
+      width: $setWidth;
+      text-align: center;
+      margin: 0;
+
+      @include breakpoint-down(small) {
+        width: 100%;
+      }
     }
   }
 }

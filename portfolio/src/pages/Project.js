@@ -109,15 +109,32 @@ const ProjectPage = ({ items }) => {
               ))}
             </div>
 
-            {game.githubLink ? (
-              <a
-                className="view-github project-button button button-primary"
-                href={game.githubLink}
-                target="_blank"
-              >
-                View Source
-              </a>
-            ) : null}
+            <div className="button-wrapper">
+              {game.githubLink ? (
+                <a
+                  className="view-github project-button button button-primary"
+                  href={game.githubLink}
+                  target="_blank"
+                >
+                  View Source
+                </a>
+              ) : null}
+
+              {game.extraSources
+                ? game.extraSources.map((source) => (
+                    <a
+                      key={Object.keys(source)[0]}
+                      className="view-github project-button button button-secondary"
+                      href={Object.values(source)[0]}
+                      target="_blank"
+                    >
+                      <button className="button button-secondary project-button">
+                        {Object.keys(source)[0]}
+                      </button>
+                    </a>
+                  ))
+                : null}
+            </div>
           </section>
         ))}
     </React.Fragment>
