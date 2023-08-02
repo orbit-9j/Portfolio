@@ -2,90 +2,183 @@ import games from "../data/games";
 import websites from "../data/websites";
 import other from "../data/other";
 
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Body() {
-  //creates cards for games or websites depending on the input file
-  const gameCards = games.map((item) => {
-    var imagePath = process.env.PUBLIC_URL + "/images/" + item.image;
-    return (
-      <Card
-        key={item.id}
-        type="game"
-        img={imagePath}
-        title={item.title}
-        desc={item.description}
-        score={item.score ? item.score : null}
-        button="View Details"
-        link={`/${item.title}`}
-        githubLink={item.githubLink ? item.githubLink : null}
-        //githubLink={item.githubLink}
-        content={item.content}
-        id={item.id}
-        timestamp={item.timestamp}
-      />
-    );
-  });
+  const cards = [...websites, ...games, ...other];
 
-  const websiteCards = websites.map((item) => {
-    var imagePath = process.env.PUBLIC_URL + "/images/" + item.image;
-    return (
-      <Card
-        key={item.id}
-        type="site"
-        img={imagePath}
-        title={item.title}
-        desc={item.description}
-        score={item.score ? item.score : null}
-        button="Go To Site"
-        siteLink={item.websiteLink}
-        githubLink={item.githubLink}
-        timestamp={item.timestamp}
-      />
-    );
-  });
+  const [selectedType, setSelectedType] = useState("all");
 
-  const otherCards = other.map((item) => {
-    var imagePath = process.env.PUBLIC_URL + "/images/" + item.image;
-    var pdfPath = process.env.PUBLIC_URL + "/" + item.path;
-    return (
-      <Card
-        key={item.id}
-        type="other"
-        img={imagePath}
-        title={item.title}
-        desc={item.description}
-        score={item.score ? item.score : null}
-        button="View Details"
-        siteLink={pdfPath}
-        githubLink={item.githubLink ? item.githubLink : null}
-        timestamp={item.timestamp}
-      />
-    );
-  });
+  //update the state with new filter
+  const handleFilterChange = (newFilter) => {
+    setSelectedType(newFilter);
+  };
+
+  //holds cards of selected type
+  const filteredCards =
+    selectedType === "all"
+      ? cards
+      : cards.filter((card) => card.type === selectedType);
+
+  //create an array of unique card types for the dropdown
+  const cardTypes = ["all", ...new Set(cards.map((card) => card.type))];
+
+  // Group the cards by their types
+  const groupedCards = cards.reduce((acc, card) => {
+    const { type } = card;
+    if (!acc[type]) {
+      acc[type] = [];
+    }
+    acc[type].push(card);
+    return acc;
+  }, {});
+
+  //handle the dropdown change event
+  const handleTypeChange = (event) => {
+    setSelectedType(event.target.value);
+  };
+
+  //rough idea, will need to condense these 2 methods later
+  const titleDecider = () => {
+    var finalType = "";
+    switch (selectedType) {
+      case "website":
+        finalType = "Websites";
+        break;
+      case "game":
+        finalType = "Games";
+        break;
+      case "other":
+        finalType = "Other";
+        break;
+    }
+
+    return <h2 className="projects__category">{finalType}</h2>;
+  };
+
+  const titleDeciderAll = (type) => {
+    var finalType = "";
+    switch (type) {
+      case "website":
+        finalType = "Websites";
+        break;
+      case "game":
+        finalType = "Games";
+        break;
+      case "other":
+        finalType = "Other";
+        break;
+    }
+
+    return <h2 className="projects__category">{finalType}</h2>;
+  };
 
   return (
     <section className="projects">
-      <h1>My Projects</h1>
+      <div className="header">
+        <h1>My Projects</h1>
 
-      <hr />
-      <h2 className="projects__category">Websites</h2>
-      <div className="grid">{websiteCards}</div>
+        <div className="filter">
+          <label>
+            <i class="fa fa-filter"></i>
+          </label>
+          <select value={selectedType} onChange={handleTypeChange}>
+            {cardTypes.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
 
-      <hr />
-      <h2 className="projects__category">Games</h2>
-      <div className="grid">{gameCards}</div>
-
-      <hr />
-      <h2 className="projects__category">Other Projects</h2>
-      <div className="grid">{otherCards}</div>
+      {/* the card attributes are currently being reworked */}
+      <div>
+        {selectedType === "all" ? (
+          Object.entries(groupedCards).map(([type, cards]) => (
+            <div key={type}>
+              <hr />
+              {titleDeciderAll(type)}
+              <div className="grid">
+                {cards.map((card) => (
+                  <Card
+                    key={card.id}
+                    type={card.type}
+                    img={process.env.PUBLIC_URL + "/images/" + card.image}
+                    title={card.title}
+                    desc={card.description}
+                    score={card.score ? card.score : null}
+                    button={
+                      card.type === "website" ? "Go To Site" : "View Details"
+                    }
+                    link={
+                      card.type == "website"
+                        ? card.websiteLink
+                        : `/${card.title}`
+                    }
+                    githubLink={card.githubLink ? card.githubLink : null}
+                    path={
+                      card.path
+                        ? process.env.PUBLIC_URL + "/" + card.path
+                        : null
+                    }
+                    content={card.content ? card.content : null}
+                    id={card.id}
+                    timestamp={card.timestamp}
+                  />
+                ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          <div>
+            <hr />
+            {titleDecider()}
+            <div className="grid">
+              {groupedCards[selectedType].map((card) => (
+                <Card
+                  key={card.id}
+                  type={card.type}
+                  img={process.env.PUBLIC_URL + "/images/" + card.image}
+                  title={card.title}
+                  desc={card.description}
+                  score={card.score ? card.score : null}
+                  button={
+                    card.type === "website" ? "Go To Site" : "View Details"
+                  }
+                  link={
+                    card.type == "website" ? card.websiteLink : `/${card.title}`
+                  }
+                  githubLink={card.githubLink ? card.githubLink : null}
+                  path={
+                    card.path ? process.env.PUBLIC_URL + "/" + card.path : null
+                  }
+                  content={card.content ? card.content : null}
+                  id={card.id}
+                  timestamp={card.timestamp}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </section>
   );
 }
 
+/* 
+button={
+  card.type === "website"
+    ? "Go To Site"
+    : card.type === "other" && card.path === null
+    ? null
+    : "View Details"
+} */
+
+//i'm currently reworking the way this part of code works, WIP
 function LinkDecider(Props) {
   //decides whether to open a project page (for a game) or an external website (for a website)
-
   if (Props.type === "game") {
     return (
       <Link
@@ -96,11 +189,21 @@ function LinkDecider(Props) {
         {Props.button}
       </Link>
     );
+  } else if (Props.type == "website") {
+    return (
+      <a
+        className="view-button button button-primary"
+        href={Props.link}
+        target="_blank"
+      >
+        {Props.button}
+      </a>
+    );
   } else {
     return (
       <a
         className="view-button button button-primary"
-        href={Props.siteLink}
+        href={Props.path}
         target="_blank"
       >
         {Props.button}
@@ -112,7 +215,10 @@ function LinkDecider(Props) {
 function Card(Props) {
   return (
     <div className="project">
-      <img className="image" src={Props.img} alt="" />
+      <div className="image-container">
+        <img className="image" src={Props.img} alt="" />
+      </div>
+
       <div className="contents">
         <div>
           <h3 className="title">{Props.title}</h3>
@@ -136,6 +242,19 @@ function Card(Props) {
       </div>
     </div>
   );
+}
+
+{
+  /* {Props.path !== null ? (
+            <a className="view-button" href={Props.path} target="_blank">
+              <button className="button button-primary">View Details</button>
+            </a>
+          ) : Props.otherLink !== null ? (
+            <a className="view-button" href={Props.otherLink} target="_blank">
+              <button className="button button-primary">View Details</button>
+            </a>
+          ) : null}
+          ; */
 }
 
 export default function Home() {

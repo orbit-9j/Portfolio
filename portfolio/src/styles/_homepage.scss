@@ -1,3 +1,38 @@
+.header {
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  h1 {
+  }
+}
+
+.filter {
+  padding-top: $mediumSpacing;
+  display: flex;
+  gap: $smallSpacing;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    color: $light;
+  }
+
+  select {
+    text-transform: capitalize;
+    padding: $smallSpacing;
+    background-color: $accent;
+    border-radius: $largeBorderRadius;
+    font-size: $smallFont;
+    border: none;
+
+    option {
+      text-transform: capitalize;
+    }
+  }
+}
+
 .projects {
   @include body;
 
@@ -28,8 +63,14 @@
         transform: scale(1.05);
       }
 
-      .image {
-        width: 100%;
+      .image-container {
+        display: flex;
+        justify-content: center;
+
+        .image {
+          max-width: 100%;
+          max-height: 18.75rem;
+        }
       }
 
       .contents {

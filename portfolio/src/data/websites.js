@@ -1,6 +1,7 @@
 export default [
   {
     id: 6,
+    type: "website",
     image: "TardisTravel.png",
     title: "E-commerce Website",
     description:
@@ -11,6 +12,7 @@ export default [
   },
   {
     id: 5,
+    type: "website",
     image: "mememaker.png",
     title: "Meme Maker Website",
     description:
@@ -21,6 +23,7 @@ export default [
   },
   {
     id: 3,
+    type: "website",
     image: "portfolio.png",
     title: "Portfolio Website",
     description:
@@ -31,6 +34,7 @@ export default [
   },
   {
     id: 7,
+    type: "website",
     image: "CardMatch.png",
     title: "Card Match draft",
     description:
@@ -42,6 +46,7 @@ export default [
 
   {
     id: 4,
+    type: "website",
     image: "WC.png",
     title: "Wireless Communication Website",
     description:

@@ -1,6 +1,7 @@
 export default [
   {
     id: 4,
+    type: "game",
     image: "CS.png",
     title: "Cyberscape: a Cybersecurity RPG",
     description:
@@ -203,6 +204,7 @@ export default [
   },
   {
     id: 3,
+    type: "game",
     image: "PO.png",
     title: "Psychodyssey",
     description:
@@ -316,6 +318,7 @@ export default [
 
   {
     id: 1,
+    type: "game",
     image: "PD.png",
     title: "Puzzle Dungeon: a Multiplayer Puzzle Game",
     description:
@@ -464,6 +467,7 @@ export default [
 
   {
     id: 2,
+    type: "game",
     image: "MS.png",
     title: "Menace Simulator",
     description:

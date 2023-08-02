@@ -105,6 +105,33 @@
   margin-bottom: 0.625rem;
 }
 
+.header {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.filter {
+  padding-top: 1.25rem;
+  display: flex;
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
+}
+.filter label {
+  color: rgb(244, 255, 239);
+}
+.filter select {
+  text-transform: capitalize;
+  padding: 0.625rem;
+  background-color: rgb(255, 113, 30);
+  border-radius: 1.875rem;
+  font-size: 0.875rem;
+  border: none;
+}
+.filter select option {
+  text-transform: capitalize;
+}
+
 .projects {
   margin: auto;
   padding: 3.125rem;
@@ -152,8 +179,13 @@
 .projects .grid .project:hover {
   transform: scale(1.05);
 }
-.projects .grid .project .image {
-  width: 100%;
+.projects .grid .project .image-container {
+  display: flex;
+  justify-content: center;
+}
+.projects .grid .project .image-container .image {
+  max-width: 100%;
+  max-height: 18.75rem;
 }
 .projects .grid .project .contents {
   text-align: center;
