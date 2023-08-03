@@ -1,34 +1,51 @@
 .header {
   align-items: center;
-
-  display: grid;
-  grid-template-columns: 1fr auto;
-
-  h1 {
-  }
-}
-
-.filter {
-  padding-top: $mediumSpacing;
-  display: flex;
-  gap: $smallSpacing;
   justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: $smallSpacing;
 
-  label {
-    color: $light;
+  @include breakpoint-down(medium) {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  select {
-    text-transform: capitalize;
-    padding: $smallSpacing;
-    background-color: $accent;
-    border-radius: $largeBorderRadius;
-    font-size: $smallFont;
-    border: none;
+  .spacer {
+    width: 6.25rem;
+    background-color: green;
 
-    option {
+    @include breakpoint-down(medium) {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .filter {
+    display: flex;
+    gap: $smallSpacing;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint-down(medium) {
+      margin-top: $mediumSpacing;
+    }
+
+    label {
+      color: $light;
+    }
+
+    select {
       text-transform: capitalize;
+      padding: $smallSpacing;
+      background-color: $accent;
+      border-radius: $largeBorderRadius;
+      font-size: $smallFont;
+      border: none;
+
+      option {
+        text-transform: capitalize;
+      }
     }
   }
 }

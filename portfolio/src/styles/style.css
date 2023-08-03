@@ -107,20 +107,44 @@
 
 .header {
   align-items: center;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.625rem;
 }
-.filter {
-  padding-top: 1.25rem;
+@media (max-width: 63.9375em) {
+  .header {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header .spacer {
+  width: 6.25rem;
+  background-color: green;
+}
+@media (max-width: 63.9375em) {
+  .header .spacer {
+    width: 0;
+    height: 0;
+  }
+}
+.header .filter {
   display: flex;
   gap: 0.625rem;
   justify-content: center;
   align-items: center;
 }
-.filter label {
+@media (max-width: 63.9375em) {
+  .header .filter {
+    margin-top: 1.25rem;
+  }
+}
+.header .filter label {
   color: rgb(244, 255, 239);
 }
-.filter select {
+.header .filter select {
   text-transform: capitalize;
   padding: 0.625rem;
   background-color: rgb(255, 113, 30);
@@ -128,7 +152,7 @@
   font-size: 0.875rem;
   border: none;
 }
-.filter select option {
+.header .filter select option {
   text-transform: capitalize;
 }
 

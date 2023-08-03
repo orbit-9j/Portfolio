@@ -74,9 +74,38 @@ function Body() {
     return <h2 className="projects__category">{finalType}</h2>;
   };
 
+  function CardComponent({ card }) {
+    return (
+      <Card
+        key={card.id}
+        type={card.type}
+        img={process.env.PUBLIC_URL + "/images/" + card.image}
+        title={card.title}
+        desc={card.description}
+        score={card.score ? card.score : null}
+        button={card.type === "website" ? "Go To Site" : "View Details"}
+        link={
+          card.type === "website" || card.type === "other"
+            ? card.websiteLink
+            : card.type === "game"
+            ? `/${card.title}`
+            : null
+        }
+        githubLink={card.githubLink ? card.githubLink : null}
+        path={
+          card.path !== null ? process.env.PUBLIC_URL + "/" + card.path : null
+        }
+        content={card.content ? card.content : null}
+        id={card.id}
+        timestamp={card.timestamp}
+      />
+    );
+  }
+
   return (
     <section className="projects">
       <div className="header">
+        <div className="spacer"></div>
         <h1>My Projects</h1>
 
         <div className="filter">
@@ -93,71 +122,25 @@ function Body() {
         </div>
       </div>
 
-      {/* the card attributes are currently being reworked */}
       <div>
+        <hr />
         {selectedType === "all" ? (
           Object.entries(groupedCards).map(([type, cards]) => (
             <div key={type}>
-              <hr />
               {titleDeciderAll(type)}
               <div className="grid">
                 {cards.map((card) => (
-                  <Card
-                    key={card.id}
-                    type={card.type}
-                    img={process.env.PUBLIC_URL + "/images/" + card.image}
-                    title={card.title}
-                    desc={card.description}
-                    score={card.score ? card.score : null}
-                    button={
-                      card.type === "website" ? "Go To Site" : "View Details"
-                    }
-                    link={
-                      card.type == "website"
-                        ? card.websiteLink
-                        : `/${card.title}`
-                    }
-                    githubLink={card.githubLink ? card.githubLink : null}
-                    path={
-                      card.path
-                        ? process.env.PUBLIC_URL + "/" + card.path
-                        : null
-                    }
-                    content={card.content ? card.content : null}
-                    id={card.id}
-                    timestamp={card.timestamp}
-                  />
+                  <CardComponent card={card} />
                 ))}
               </div>
             </div>
           ))
         ) : (
           <div>
-            <hr />
             {titleDecider()}
             <div className="grid">
               {groupedCards[selectedType].map((card) => (
-                <Card
-                  key={card.id}
-                  type={card.type}
-                  img={process.env.PUBLIC_URL + "/images/" + card.image}
-                  title={card.title}
-                  desc={card.description}
-                  score={card.score ? card.score : null}
-                  button={
-                    card.type === "website" ? "Go To Site" : "View Details"
-                  }
-                  link={
-                    card.type == "website" ? card.websiteLink : `/${card.title}`
-                  }
-                  githubLink={card.githubLink ? card.githubLink : null}
-                  path={
-                    card.path ? process.env.PUBLIC_URL + "/" + card.path : null
-                  }
-                  content={card.content ? card.content : null}
-                  id={card.id}
-                  timestamp={card.timestamp}
-                />
+                <CardComponent card={card} />
               ))}
             </div>
           </div>
@@ -167,18 +150,10 @@ function Body() {
   );
 }
 
-/* 
-button={
-  card.type === "website"
-    ? "Go To Site"
-    : card.type === "other" && card.path === null
-    ? null
-    : "View Details"
-} */
-
 //i'm currently reworking the way this part of code works, WIP
+//note to self: props is the attributes passed into card, so websiteLink becomes link (I should really just name them the same to avoid confusion huh)
 function LinkDecider(Props) {
-  //decides whether to open a project page (for a game) or an external website (for a website)
+  //decides whether to open a project page (for a game) or an external website (for a website), etc
   if (Props.type === "game") {
     return (
       <Link
@@ -189,7 +164,10 @@ function LinkDecider(Props) {
         {Props.button}
       </Link>
     );
-  } else if (Props.type == "website") {
+  } else if (
+    (Props.type === "website" || Props.type === "other") &&
+    Props.link
+  ) {
     return (
       <a
         className="view-button button button-primary"
@@ -199,7 +177,7 @@ function LinkDecider(Props) {
         {Props.button}
       </a>
     );
-  } else {
+  } else if (Props.type === "other" && Props.path) {
     return (
       <a
         className="view-button button button-primary"
@@ -209,6 +187,8 @@ function LinkDecider(Props) {
         {Props.button}
       </a>
     );
+  } else {
+    return null;
   }
 }
 
@@ -232,7 +212,7 @@ function Card(Props) {
         </div>
 
         <div className="buttons">
-          {LinkDecider(Props)} {/*project page vs site webpage*/}
+          {LinkDecider(Props)}
           {Props.githubLink !== null ? (
             <a className="view-button" href={Props.githubLink} target="_blank">
               <button className="button button-secondary">View Source</button>
@@ -242,19 +222,6 @@ function Card(Props) {
       </div>
     </div>
   );
-}
-
-{
-  /* {Props.path !== null ? (
-            <a className="view-button" href={Props.path} target="_blank">
-              <button className="button button-primary">View Details</button>
-            </a>
-          ) : Props.otherLink !== null ? (
-            <a className="view-button" href={Props.otherLink} target="_blank">
-              <button className="button button-primary">View Details</button>
-            </a>
-          ) : null}
-          ; */
 }
 
 export default function Home() {
