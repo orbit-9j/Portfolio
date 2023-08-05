@@ -542,4 +542,13 @@ export default [
       ],
     ],
   },
+  {
+    id: 5,
+    type: "game",
+    image: "C4.png",
+    title: "Connect 4",
+    description: "The popular board game Connect 4, coded with Python.",
+    timestamp: "Completed 08/2021",
+    githubLink: "https://github.com/orbit-9j/connect4",
+  },
 ];
