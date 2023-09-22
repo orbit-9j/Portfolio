@@ -171,7 +171,7 @@ export default [
       {
         id: 18,
         active: false,
-        title: "quest log update",
+        title: "quest log update colour",
         image: "CS/CS quest update.png",
       },
     ],
