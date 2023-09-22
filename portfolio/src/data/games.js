@@ -11,8 +11,14 @@ export default [
     githubLink: "https://git.cardiff.ac.uk./c2041844/fyp",
     images: [
       {
-        id: 17,
+        id: 1435971,
         active: true,
+        title: "game poster",
+        image: "CS/CS poster.jpg",
+      },
+      {
+        id: 17,
+        active: false,
         title: "main menu",
         image: "CS/CS17.png",
       },
@@ -156,6 +162,18 @@ export default [
         title: "player enjoyment",
         image: "CS/CS16.png",
       },
+      {
+        id: 17,
+        active: false,
+        title: "quest log feature",
+        image: "CS/CS quest log.png",
+      },
+      {
+        id: 18,
+        active: false,
+        title: "quest log update",
+        image: "CS/CS quest update.png",
+      },
     ],
     cards: [
       [
@@ -180,6 +198,11 @@ export default [
           "The player can interact with NPCs and objects to gain information about the world.",
           "The player can name the main character any name they want.",
           "The player experiences the story through dialogue and dialogue choices.",
+        ],
+        "Since the original submission, I have read through user feedback and added the following features:",
+        [
+          "A quest window showing the current quest, which flashes purple when it updates",
+          "When further dialogue is available with an NPC (such as after progressing on a quest), their dialogue icon is purple instead of yellow",
         ],
       ],
       [
@@ -221,8 +244,14 @@ export default [
     ],
     images: [
       {
-        id: "1",
+        id: 43569,
         active: true,
+        title: "game poster",
+        image: "PO/PO poster.jpg",
+      },
+      {
+        id: "1",
+        active: false,
         title: "Difficulty selection",
         image: "PO/PO1.png",
       },
@@ -292,6 +321,12 @@ export default [
         title: "Figma preview",
         image: "PO/PO12.png",
       },
+      {
+        id: "13",
+        active: false,
+        title: "Concept art for characters and worlds",
+        image: "PO/PO concept.jpg",
+      },
     ],
     cards: [
       [
@@ -312,6 +347,10 @@ export default [
         "There were 2 aspects of the project that I really enjoyed.",
         "The first aspect was data collection and analysis. I used Microsoft Forms to carry out a survey. I used the built-in MS Forms results summary for quantitative analysis, then performed qualitative analysis through an affinity diagram. I love collecting data and finding patterns in it, that I can then use to create something new.",
         "The second aspect that I liked was creating the game's visuals. I drew the characters, environments, and some UI elements from scratch using Krita. I liked watching the game prototype come together with a coherent colour scheme and art style. It was a challenge to make a game prototype using Figma, which is aimed more towards app and website UI creation, but that only made me feel more satisfied once I wired up all the interactions and made it work.",
+      ],
+      [
+        "Further development",
+        "After I made Cyberscape, I decided to revisit this game and make it a sequel to Cyberscape. I decided to make this prototype into a full game, and it is now an ambitious passion project. I have added several new characters, including a character from Cyberscape. The plot was changed and overhauled, and I am now in the process of creating concept art for the characters and their nightmare worlds.",
       ],
     ],
   },
