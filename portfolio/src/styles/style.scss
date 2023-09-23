@@ -39,7 +39,7 @@ h1 {
   font-size: $headingFont;
   color: $light;
   text-align: center;
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     font-size: $mobileHeadingFont;
   }
 }
@@ -47,7 +47,7 @@ h2,
 h3 {
   color: $lightAccent;
   font-size: $subheadingFont;
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     font-size: $mobileSubheadingFont;
   }
 }
@@ -57,7 +57,7 @@ ul {
   color: $light;
   font-size: $mainFont;
   line-height: 1.5;
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     font-size: $mobileMainFont;
   }
 }
@@ -96,12 +96,14 @@ main {
 }
 
 .mainPanel {
-  @include breakpoint-up(large) {
-    flex: 4;
+  @include breakpoint-up(medium) {
+    //flex: 4;
+    width: calc(97vw * 4 / 5);
   }
 
-  transition: margin-top $slowerTransitionTime;
+  transition: $slowerTransitionTime;
   overflow: auto;
+  margin-top: $largerSpacing;
 }
 
 .button {
@@ -149,6 +151,7 @@ main {
   border-width: 0.1875rem;
   border-color: $accent;
   background-color: transparent;
+
   &:hover {
     color: $light;
     border-color: $light;

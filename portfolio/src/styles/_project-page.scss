@@ -40,7 +40,6 @@
     gap: $smallSpacing;
     @include breakpoint-down(medium) {
       margin-top: $mediumSpacing;
-      padding: $mediumSpacing $smallSpacing;
     }
   }
 

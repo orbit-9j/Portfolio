@@ -103,11 +103,11 @@ function Body() {
   }
 
   return (
-    <section className="projects">
+    //<section className="projects">
+    <React.Fragment>
       <div className="header">
         <div className="spacer"></div>
         <h1>My Projects</h1>
-
         <div className="filter">
           <label>
             <i class="fa fa-filter"></i>
@@ -146,11 +146,11 @@ function Body() {
           </div>
         )}
       </div>
-    </section>
+    </React.Fragment>
+    //</section>
   );
 }
 
-//i'm currently reworking the way this part of code works, WIP
 //note to self: props is the attributes passed into card, so websiteLink becomes link (I should really just name them the same to avoid confusion huh)
 function LinkDecider(Props) {
   //decides whether to open a project page (for a game) or an external website (for a website), etc
@@ -225,9 +225,5 @@ function Card(Props) {
 }
 
 export default function Home() {
-  return (
-    <div>
-      <Body />
-    </div>
-  );
+  return <Body />;
 }

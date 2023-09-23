@@ -5,7 +5,7 @@
   grid-template-columns: auto 1fr auto;
   gap: $smallSpacing;
 
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     gap: 0;
     display: flex;
     flex-direction: column;
@@ -14,9 +14,9 @@
 
   .spacer {
     width: 6.25rem;
-    background-color: green;
+    //background-color: green;
 
-    @include breakpoint-down(medium) {
+    @include breakpoint-down(small) {
       width: 0;
       height: 0;
     }
@@ -50,7 +50,60 @@
   }
 }
 
-.projects {
+.mainPanel .projects {
+  nav {
+    //only centers correctly if position is relative
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(97vw * 4 / 5);
+
+    //i can't figure out the exact width, it works well up until a larger screen size (not quite large?), where it overlaps with the sidebar a bit
+
+    @include breakpoint-up(medium) {
+      max-width: calc(97vw - $setWidthSmall - 2 * $largeSpacing);
+    }
+
+    @include breakpoint-down(medium) {
+      max-width: calc(97vw - $setWidth - 2 * $mediumSpacing);
+    }
+
+    transition: $transitionTime ease-in-out;
+    display: flex;
+    background-color: rgb(31, 36, 26); //rgba(21, 27, 19, 255) original dark
+    box-sizing: border-box;
+    justify-content: center;
+    z-index: 2;
+    height: $largerSpacing;
+
+    a {
+      button {
+        min-width: 100px;
+        height: 100%;
+      }
+
+      display: inline-block;
+      margin-top: auto;
+      margin-bottom: auto;
+      text-decoration: none;
+      align-self: center;
+      color: $lightAccent;
+      padding: 0 $largeSpacing;
+
+      &:hover {
+        color: $light;
+      }
+
+      &:not(:last-child) {
+        border-right: $borderWidth solid $lightAccent;
+      }
+
+      @include breakpoint-down(medium) {
+        padding: 0 $mediumSpacing;
+      }
+    }
+  }
+
   @include body;
 
   &__category {
@@ -62,10 +115,11 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: $largeSpacing;
+    gap: $largerSpacing;
 
     @include breakpoint-down(medium) {
-      gap: $mediumSpacing;
+      grid-template-columns: 1fr;
+      gap: $largeSpacing;
     }
 
     @include breakpoint-down(small) {
@@ -96,6 +150,8 @@
         flex-direction: column;
         gap: $mediumSpacing;
 
+        padding: $mediumSpacing;
+
         .timestamp {
           color: grey;
         }
@@ -112,7 +168,7 @@
         .buttons {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: $smallSpacing;
+          gap: $mediumSpacing;
           width: 100%;
           align-items: stretch;
           justify-items: stretch;

@@ -85,7 +85,7 @@ const ProjectPage = ({ items }) => {
       {items
         .filter((game) => game.title === title)
         .map((game, index) => (
-          <section key={index} className="projects project-desc">
+          <section key={index} className="project-desc">
             <h1>{game.title}</h1>
             {/*  <hr /> */}
             <Carousel IA={game.images} />

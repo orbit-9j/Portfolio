@@ -1,12 +1,16 @@
 .sidePanel {
   @include background-gradient-dark;
+
   @include breakpoint-up(medium) {
-    flex: 1;
-    min-width: $setWidth;
+    //flex: 1;
+    width: calc(97vw / 5);
+    min-width: $setWidthSmall;
     padding: $largeSpacing;
   }
+
   @include breakpoint-down(medium) {
     padding: $largeSpacing $mediumSpacing;
+    min-width: $setWidth;
   }
 
   @include breakpoint-down(small) {
@@ -47,25 +51,18 @@
     @include breakpoint-down(small) {
       display: none;
       transition: $slowerTransitionTime;
-      /* height: calc(100%-$navHeight); */
       padding: $mediumSpacing;
+    }
+
+    @include breakpoint-up(medium) {
+      height: 100%;
     }
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: $mediumSpacing;
 
-    @include breakpoint-up(medium) {
-      height: 100%;
-    }
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      gap: $mediumSpacing;
-    }
     a {
       text-decoration: none;
       color: $light;
@@ -74,9 +71,11 @@
         color: $light;
       }
     }
+
     h1 {
       transition: $transitionTime ease-in-out;
     }
+
     h1:hover {
       color: $accent;
     }
@@ -84,28 +83,14 @@
     img {
       max-height: 1.875rem;
       max-width: 1.875rem;
+
       &:not(:last-child) {
         margin-right: $xSmallSpacing;
       }
     }
 
-    nav {
-      transition: $transitionTime ease-in-out;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: $smallSpacing;
-      width: 100%;
-      a {
-        button {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .info {
-      h2 {
-        margin-bottom: $smallSpacing;
-      }
+    h2:not(.subtitle) {
+      margin-bottom: $smallSpacing;
     }
   }
 }

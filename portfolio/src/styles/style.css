@@ -6,14 +6,15 @@
 }
 @media (min-width: 40em) {
   .sidePanel {
-    flex: 1;
-    min-width: 12.5rem;
+    width: 19.4vw;
+    min-width: 11.25rem;
     padding: 3.125rem;
   }
 }
 @media (max-width: 63.9375em) {
   .sidePanel {
     padding: 3.125rem 1.25rem;
+    min-width: 15.625rem;
   }
 }
 @media (max-width: 39.9375em) {
@@ -50,13 +51,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
 }
 @media (max-width: 39.9375em) {
   .sidePanel #sideContainer {
     display: none;
     transition: 500ms;
-    /* height: calc(100%-$navHeight); */
     padding: 1.25rem;
   }
 }
@@ -64,11 +63,6 @@
   .sidePanel #sideContainer {
     height: 100%;
   }
-}
-.sidePanel #sideContainer > div {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
 }
 .sidePanel #sideContainer a {
   text-decoration: none;
@@ -90,18 +84,7 @@
 .sidePanel #sideContainer img:not(:last-child) {
   margin-right: 0.3125rem;
 }
-.sidePanel #sideContainer nav {
-  transition: 200ms ease-in-out;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.625rem;
-  width: 100%;
-}
-.sidePanel #sideContainer nav a button {
-  width: 100%;
-  height: 100%;
-}
-.sidePanel #sideContainer .info h2 {
+.sidePanel #sideContainer h2:not(.subtitle) {
   margin-bottom: 0.625rem;
 }
 
@@ -112,7 +95,7 @@
   grid-template-columns: auto 1fr auto;
   gap: 0.625rem;
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   .header {
     gap: 0;
     display: flex;
@@ -122,9 +105,8 @@
 }
 .header .spacer {
   width: 6.25rem;
-  background-color: green;
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   .header .spacer {
     width: 0;
     height: 0;
@@ -156,94 +138,142 @@
   text-transform: capitalize;
 }
 
-.projects {
+.mainPanel .projects {
   margin: auto;
-  padding: 3.125rem;
+  padding: 3.125rem 4.6875rem;
 }
-@media (max-width: 63.9375em) {
-  .projects {
-    padding: 1.25rem;
+.mainPanel .projects nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 77.6vw;
+  transition: 200ms ease-in-out;
+  display: flex;
+  background-color: rgb(31, 36, 26);
+  box-sizing: border-box;
+  justify-content: center;
+  z-index: 2;
+  height: 4.6875rem;
+}
+@media (min-width: 40em) {
+  .mainPanel .projects nav {
+    max-width: calc(97vw - 11.25rem - 6.25rem);
   }
 }
-.projects__category {
+@media (max-width: 63.9375em) {
+  .mainPanel .projects nav {
+    max-width: calc(97vw - 15.625rem - 2.5rem);
+  }
+}
+.mainPanel .projects nav a {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+  text-decoration: none;
+  align-self: center;
+  color: #ff9151;
+  padding: 0 3.125rem;
+}
+.mainPanel .projects nav a button {
+  min-width: 100px;
+  height: 100%;
+}
+.mainPanel .projects nav a:hover {
+  color: rgb(244, 255, 239);
+}
+.mainPanel .projects nav a:not(:last-child) {
+  border-right: 0.125rem solid #ff9151;
+}
+@media (max-width: 63.9375em) {
+  .mainPanel .projects nav a {
+    padding: 0 1.25rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .mainPanel .projects {
+    padding: 3.125rem;
+  }
+}
+.mainPanel .projects__category {
   margin: 1.25rem;
   margin-left: 0;
   color: rgb(244, 255, 239);
 }
-.projects .grid {
+.mainPanel .projects .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3.125rem;
+  gap: 4.6875rem;
 }
 @media (max-width: 63.9375em) {
-  .projects .grid {
-    gap: 1.25rem;
+  .mainPanel .projects .grid {
+    grid-template-columns: 1fr;
+    gap: 3.125rem;
   }
 }
 @media (max-width: 39.9375em) {
-  .projects .grid {
+  .mainPanel .projects .grid {
     grid-template-columns: 1fr;
   }
 }
-.projects .grid .project {
+.mainPanel .projects .grid .project {
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
   box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
-  overflow: hidden;
   transition: all 200ms ease-in-out;
 }
-.projects .grid .project .contents {
+.mainPanel .projects .grid .project .contents {
   padding: 1.25rem 1.875rem;
 }
 @media (max-width: 63.9375em) {
-  .projects .grid .project .contents {
+  .mainPanel .projects .grid .project .contents {
     padding: 0.625rem;
   }
 }
-.projects .grid .project:hover {
+.mainPanel .projects .grid .project:hover {
   transform: scale(1.05);
 }
-.projects .grid .project .image-container {
+.mainPanel .projects .grid .project .image-container {
   display: flex;
   justify-content: center;
 }
-.projects .grid .project .image-container .image {
+.mainPanel .projects .grid .project .image-container .image {
   max-width: 100%;
   max-height: 18.75rem;
 }
-.projects .grid .project .contents {
+.mainPanel .projects .grid .project .contents {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  padding: 1.25rem;
 }
-.projects .grid .project .contents .timestamp {
+.mainPanel .projects .grid .project .contents .timestamp {
   color: grey;
 }
-.projects .grid .project .contents .title {
+.mainPanel .projects .grid .project .contents .title {
   margin-bottom: 0.3125rem;
 }
-.projects .grid .project .contents .score {
+.mainPanel .projects .grid .project .contents .score {
   margin-top: 0.3125rem;
   color: grey;
 }
-.projects .grid .project .contents .buttons {
+.mainPanel .projects .grid .project .contents .buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.625rem;
+  gap: 1.25rem;
   width: 100%;
   align-items: stretch;
   justify-items: stretch;
 }
 @media (max-width: 39.9375em) {
-  .projects .grid .project .contents .buttons {
+  .mainPanel .projects .grid .project .contents .buttons {
     grid-template-columns: 1fr;
   }
 }
-.projects .grid .project .contents .buttons a {
+.mainPanel .projects .grid .project .contents .buttons a {
   text-decoration: none;
 }
-.projects .grid .project .contents .buttons a button {
+.mainPanel .projects .grid .project .contents .buttons a button {
   width: 100%;
 }
 
@@ -281,7 +311,6 @@
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
   box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
-  overflow: hidden;
   /* background-color: green; //testing */
   margin-top: 3.125rem;
   padding: 1.25rem;
@@ -299,7 +328,6 @@
 @media (max-width: 63.9375em) {
   .project-desc .textContainer {
     margin-top: 1.25rem;
-    padding: 1.25rem 0.625rem;
   }
 }
 .project-desc .button-wrapper {
@@ -319,7 +347,7 @@
   padding: 0;
 }
 .project-desc .button-wrapper .project-button {
-  width: 12.5rem;
+  width: 15.625rem;
   text-align: center;
   margin: 0;
 }
@@ -342,7 +370,6 @@
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
   box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
-  overflow: hidden;
 }
 .carousel .contents {
   padding: 1.25rem 1.875rem;
@@ -450,7 +477,7 @@ h1 {
   color: rgb(244, 255, 239);
   text-align: center;
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   h1 {
     font-size: 1.875rem;
   }
@@ -461,7 +488,7 @@ h3 {
   color: #ff9151;
   font-size: 1.375rem;
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   h2,
   h3 {
     font-size: 1.25rem;
@@ -474,7 +501,7 @@ ul {
   font-size: 1rem;
   line-height: 1.5;
 }
-@media (max-width: 63.9375em) {
+@media (max-width: 39.9375em) {
   p,
   ul {
     font-size: 0.875rem;
@@ -512,12 +539,13 @@ main {
 }
 
 .mainPanel {
-  transition: margin-top 500ms;
+  transition: 500ms;
   overflow: auto;
+  margin-top: 4.6875rem;
 }
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .mainPanel {
-    flex: 4;
+    width: 77.6vw;
   }
 }
 
@@ -578,11 +606,11 @@ hr {
 .error {
   color: #ff9151;
   margin: auto;
-  padding: 3.125rem;
+  padding: 3.125rem 4.6875rem;
 }
 @media (max-width: 63.9375em) {
   .error {
-    padding: 1.25rem;
+    padding: 3.125rem;
   }
 }
 .error .error-message {

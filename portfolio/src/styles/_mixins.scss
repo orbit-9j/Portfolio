@@ -17,7 +17,6 @@ $breakpoints-down: (
   "medium": "63.9375em",
   "large": "87.4375em",
 );
-
 @mixin breakpoint-up($size) {
   @media (min-width: map-get($breakpoints-up, $size)) {
     @content;
@@ -33,9 +32,9 @@ $breakpoints-down: (
 
 @mixin body {
   margin: auto;
-  padding: $largeSpacing;
+  padding: $largeSpacing $largerSpacing;
   @include breakpoint-down(medium) {
-    padding: $mediumSpacing;
+    padding: $largeSpacing;
   }
 }
 
@@ -51,7 +50,7 @@ $breakpoints-down: (
   @include background-gradient-dark;
   border-radius: $xSmallSpacing;
   box-shadow: 0px 0.1875rem 0.75rem rgba(0, 0, 0, 1);
-  overflow: hidden;
+  //overflow: hidden;
   .contents {
     padding: $mediumSpacing 1.875rem;
     @include breakpoint-down(medium) {

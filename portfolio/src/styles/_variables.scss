@@ -8,6 +8,7 @@ $transparent: rgba(red($light), green($light), blue($light), 0.08);
 
 //sizes and spacings
 $xLargeSpacing: 6.25rem;
+$largerSpacing: 4.6875rem;
 $largeSpacing: 3.125rem;
 $mediumSpacing: 1.25rem;
 $smallSpacing: 0.625rem;
@@ -23,7 +24,8 @@ $mobileSubheadingFont: 1.25rem;
 $mobileMainFont: 0.875rem;
 $mobileSmallFont: 0.875rem;
 
-$setWidth: 12.5rem;
+$setWidth: 15.625rem;
+$setWidthSmall: 11.25rem;
 $navHeight: 2.5rem;
 $borderRadius: 0.625rem;
 $largeBorderRadius: 1.875rem;
