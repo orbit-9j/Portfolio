@@ -116,7 +116,9 @@ const ProjectPage = ({ items }) => {
                   href={game.githubLink}
                   target="_blank"
                 >
-                  View Source
+                  <button className="button button-primary project-button">
+                    View Source
+                  </button>
                 </a>
               ) : null}
 

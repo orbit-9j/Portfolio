@@ -2,33 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function SidePanel() {
-  /* var pdfPath = process.env.PUBLIC_URL + "/CV.pdf"; */
   var imagePath = process.env.PUBLIC_URL + "/images/side-panel/";
-  const openSidePanel = () => {
-    document.getElementById("sidePanel").style.height = "95vh";
-    document.getElementById("sideContainer").style.display = "flex";
-    document.getElementById("main").style.marginTop = "95vh";
-    document.getElementById("open").style.display = "none";
-    document.getElementById("close").style.display = "block";
-  };
-  const closeSidePanel = () => {
-    document.getElementById("sidePanel").style.height = "null";
-    document.getElementById("sideContainer").style.display = "none";
-    document.getElementById("main").style.marginTop = "0";
-    document.getElementById("open").style.display = "block";
-    document.getElementById("close").style.display = "none";
-  };
+
   return (
     <section id="sidePanel" className="sidePanel">
-      <div className="strip">
-        <span id="open" onClick={openSidePanel}>
-          &#9776;
-        </span>
-        <span id="close" onClick={closeSidePanel}>
-          &#10006;
-        </span>
-      </div>
-
       <div id="sideContainer" className="sideContainer">
         <Link to="/" className="link">
           <h1>Orbit 9-j</h1>

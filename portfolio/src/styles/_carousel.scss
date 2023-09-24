@@ -4,6 +4,8 @@
 .carousel::before,
 .carousel::after {
   box-sizing: border-box;
+
+  z-index: 0;
 }
 
 .carousel {
@@ -74,8 +76,14 @@
 
 .carousel-button.prev {
   left: $mediumSpacing;
+  @include breakpoint-down(medium) {
+    left: $xSmallSpacing;
+  }
 }
 
 .carousel-button.next {
   right: $mediumSpacing;
+  @include breakpoint-down(medium) {
+    right: $xSmallSpacing;
+  }
 }

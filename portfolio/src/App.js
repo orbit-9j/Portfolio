@@ -21,8 +21,8 @@ function App() {
         <SidePanel />
 
         <section id="main" className="mainPanel">
+          <Navbar />
           <section className="projects">
-            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/:title" element={<ProjectPage items={items} />} />

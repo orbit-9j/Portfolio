@@ -51,65 +51,16 @@
 }
 
 .mainPanel .projects {
-  nav {
-    //only centers correctly if position is relative
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: calc(97vw * 4 / 5);
-
-    //i can't figure out the exact width, it works well up until a larger screen size (not quite large?), where it overlaps with the sidebar a bit
-
-    @include breakpoint-up(medium) {
-      max-width: calc(97vw - $setWidthSmall - 2 * $largeSpacing);
-    }
-
-    @include breakpoint-down(medium) {
-      max-width: calc(97vw - $setWidth - 2 * $mediumSpacing);
-    }
-
-    transition: $transitionTime ease-in-out;
-    display: flex;
-    background-color: rgb(31, 36, 26); //rgba(21, 27, 19, 255) original dark
-    box-sizing: border-box;
-    justify-content: center;
-    z-index: 2;
-    height: $largerSpacing;
-
-    a {
-      button {
-        min-width: 100px;
-        height: 100%;
-      }
-
-      display: inline-block;
-      margin-top: auto;
-      margin-bottom: auto;
-      text-decoration: none;
-      align-self: center;
-      color: $lightAccent;
-      padding: 0 $largeSpacing;
-
-      &:hover {
-        color: $light;
-      }
-
-      &:not(:last-child) {
-        border-right: $borderWidth solid $lightAccent;
-      }
-
-      @include breakpoint-down(medium) {
-        padding: 0 $mediumSpacing;
-      }
-    }
-  }
-
   @include body;
 
   &__category {
-    margin: $mediumSpacing;
+    margin: $largeSpacing 0;
     margin-left: 0;
     color: $light;
+
+    @include breakpoint-down(medium) {
+      margin: $mediumSpacing 0;
+    }
   }
 
   .grid {
@@ -175,6 +126,7 @@
 
           @include breakpoint-down(small) {
             grid-template-columns: 1fr;
+            gap: $smallSpacing;
           }
 
           a {

@@ -2,7 +2,6 @@
   @include background-gradient-dark;
 
   @include breakpoint-up(medium) {
-    //flex: 1;
     width: calc(97vw / 5);
     min-width: $setWidthSmall;
     padding: $largeSpacing;
@@ -15,45 +14,17 @@
 
   @include breakpoint-down(small) {
     padding: 0;
-    height: $navHeight;
+    order: 2;
+    height: 30vh;
+    position: relative;
+    //display: none;
   }
 
   overflow: auto;
   text-align: center;
   transition: $slowerTransitionTime;
 
-  .strip {
-    display: none;
-
-    @include breakpoint-down(small) {
-      color: $light;
-      font-size: $subheadingFont;
-      display: block;
-      height: $navHeight;
-      display: flex;
-      align-items: center;
-      justify-content: right;
-
-      margin: 0;
-      #close {
-        display: none;
-      }
-
-      #open,
-      #close {
-        position: absolute;
-        right: $mediumSpacing;
-      }
-    }
-  }
-
   #sideContainer {
-    @include breakpoint-down(small) {
-      display: none;
-      transition: $slowerTransitionTime;
-      padding: $mediumSpacing;
-    }
-
     @include breakpoint-up(medium) {
       height: 100%;
     }

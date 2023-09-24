@@ -1,40 +1,45 @@
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const openSidePanel = () => {
+    document.getElementById("menu-container").style.height = "100%";
+    document.getElementById("menu-container").style.display = "flex";
+    /* document.getElementById("main").style.marginTop = "0"; */
+    document.getElementById("open").style.display = "none";
+    document.getElementById("close").style.display = "block";
+  };
+  const closeSidePanel = () => {
+    document.getElementById("menu-container").style.height = "null";
+    document.getElementById("menu-container").style.display = "none";
+    /* document.getElementById("main").style.marginTop = "0"; */
+    document.getElementById("open").style.display = "block";
+    document.getElementById("close").style.display = "none";
+  };
+
   return (
     <nav>
-      <a href="http://localhost:3001/Portfolio/">Home</a>
-      <a href="https://github.com/orbit-9j" target="_blank">
-        GitHub
-      </a>
-      <a
-        href="https://github.com/orbit-9j/cv/blob/main/Rin_Tian_CV.pdf"
-        target="_blank"
-      >
-        CV
-      </a>
-      <Link to="/About">About Me</Link>
+      <div className="strip">
+        <span id="open" onClick={openSidePanel}>
+          &#9776;
+        </span>
+        <span id="close" onClick={closeSidePanel}>
+          &#10006;
+        </span>
+      </div>
+
+      <div id="menu-container">
+        <a href="/">Home</a>
+        <a href="https://github.com/orbit-9j" target="_blank">
+          GitHub
+        </a>
+        <a
+          href="https://github.com/orbit-9j/cv/blob/main/Rin_Tian_CV.pdf"
+          target="_blank"
+        >
+          CV
+        </a>
+        <Link to="/About">About Me</Link>
+      </div>
     </nav>
   );
 }
-
-//buttons or no buttons?
-/* 
-<nav>
-      <a href="http://localhost:3001/Portfolio/">
-        {" "}
-        <button className="button button-primary">Home</button>{" "}
-      </a>
-      <a href="https://github.com/orbit-9j" target="_blank">
-        <button className="button button-primary">GitHub</button>
-      </a>
-      <a
-        href="https://github.com/orbit-9j/cv/blob/main/Rin_Tian_CV.pdf"
-        target="_blank"
-      >
-        <button className="button button-primary">CV</button>
-      </a>
-      <Link to="/About">
-        <button className="button button-secondary">About Me</button>
-      </Link>
-    </nav> */

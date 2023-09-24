@@ -4,6 +4,7 @@
 @import "homepage";
 @import "project-page";
 @import "carousel";
+@import "navbar";
 
 * {
   margin: 0;
@@ -80,6 +81,7 @@ main {
     rgba(red($darkest), green($darkest), blue($darkest), 0.95),
     rgba(red($darkest), green($darkest), blue($darkest), 0.87)
   );
+
   backdrop-filter: blur(0.07rem);
   height: 95vh;
   width: 97vw;
@@ -89,21 +91,24 @@ main {
   display: flex;
 
   @include breakpoint-down(small) {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: $navHeight auto;
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+    width: 95vw;
   }
 }
 
 .mainPanel {
   @include breakpoint-up(medium) {
-    //flex: 4;
     width: calc(97vw * 4 / 5);
   }
 
   transition: $slowerTransitionTime;
   overflow: auto;
-  margin-top: $largerSpacing;
+
+  /* @include breakpoint-down(small) {
+    margin-top: 0;
+  } */
 }
 
 .button {

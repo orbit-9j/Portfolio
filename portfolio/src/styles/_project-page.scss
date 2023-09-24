@@ -1,5 +1,3 @@
-/* optimise for mobile */
-
 .project-desc {
   p {
     text-indent: $mediumSpacing;
@@ -15,11 +13,8 @@
   }
 
   h2 {
-    /* margin-top: $mediumSpacing; */
-    //margin-bottom: $smallSpacing;
     @include breakpoint-down(medium) {
       font-size: $mobileSubheadingFont;
-      //margin-bottom: $mediumSpacing;
     }
   }
 
@@ -33,7 +28,6 @@
 
   .textContainer {
     @include card;
-    /* background-color: green; //testing */
     margin-top: $largeSpacing;
     padding: $mediumSpacing;
     display: grid;
@@ -52,7 +46,7 @@
     @include breakpoint-down(small) {
       flex-wrap: wrap;
       margin-top: $mediumSpacing;
-      gap: $xSmallSpacing;
+      gap: $smallSpacing;
     }
 
     a {

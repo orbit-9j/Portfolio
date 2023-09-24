@@ -36,6 +36,9 @@ $breakpoints-down: (
   @include breakpoint-down(medium) {
     padding: $largeSpacing;
   }
+  @include breakpoint-down(small) {
+    padding: $mediumSpacing;
+  }
 }
 
 @mixin background-gradient-dark {
