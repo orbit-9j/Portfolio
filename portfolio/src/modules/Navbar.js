@@ -28,7 +28,9 @@ export default function Navbar() {
       </div>
 
       <div id="menu-container">
-        <a href="/">Home</a>
+        <Link to="/" className="link">
+          Home
+        </Link>
         <a href="https://github.com/orbit-9j" target="_blank">
           GitHub
         </a>

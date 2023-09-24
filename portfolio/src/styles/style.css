@@ -431,7 +431,8 @@ nav #menu-container {
     flex-direction: column;
   }
 }
-nav a {
+nav a,
+nav Link {
   display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
@@ -440,24 +441,29 @@ nav a {
   color: #ff9151;
   padding: 0 3.125rem;
 }
-nav a:hover {
+nav a:hover,
+nav Link:hover {
   color: rgb(244, 255, 239);
 }
-nav a:not(:last-child) {
+nav a:not(:last-child),
+nav Link:not(:last-child) {
   border-right: 0.125rem solid #ff9151;
 }
 @media (max-width: 63.9375em) {
-  nav a {
+  nav a,
+  nav Link {
     padding: 0 1.25rem;
   }
 }
 @media (max-width: 39.9375em) {
-  nav a {
+  nav a,
+  nav Link {
     padding: 1.25rem 0;
     width: 100%;
     text-align: center;
   }
-  nav a:not(:last-child) {
+  nav a:not(:last-child),
+  nav Link:not(:last-child) {
     border-right: none;
     border-bottom: 0.125rem solid #ff9151;
   }

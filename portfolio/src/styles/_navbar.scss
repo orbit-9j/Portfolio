@@ -23,7 +23,8 @@ nav {
     padding: $mediumSpacing;
   }
 
-  a {
+  a,
+  Link {
     display: inline-block;
     margin-top: auto;
     margin-bottom: auto;
