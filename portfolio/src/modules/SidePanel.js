@@ -6,7 +6,7 @@ function SidePanel() {
 
   return (
     <section id="sidePanel" className="sidePanel">
-      <div id="sideContainer" className="sideContainer">
+      <div className="sideContainer">
         <Link to="/" className="link">
           <h1>Orbit 9-j</h1>
         </Link>

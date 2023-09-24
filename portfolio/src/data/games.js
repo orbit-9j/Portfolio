@@ -17,7 +17,7 @@ export default [
         image: "CS/CS poster.jpg",
       },
       {
-        id: 17,
+        id: 62549,
         active: false,
         title: "main menu",
         image: "CS/CS17.png",
@@ -35,7 +35,7 @@ export default [
         image: "CS/CS13.png",
       },
       {
-        id: 18,
+        id: 8423549,
         active: false,
         title: "enter player name screen",
         image: "CS/CS18.png",

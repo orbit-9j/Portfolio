@@ -1,30 +1,12 @@
-.sidePanel {
+.sidePanel,
+.footer {
   @include background-gradient-dark;
-
-  @include breakpoint-up(medium) {
-    width: calc(97vw / 5);
-    min-width: $setWidthSmall;
-    padding: $largeSpacing;
-  }
-
-  @include breakpoint-down(medium) {
-    padding: $largeSpacing $mediumSpacing;
-    min-width: $setWidth;
-  }
-
-  @include breakpoint-down(small) {
-    padding: 0;
-    order: 2;
-    height: 30vh;
-    position: relative;
-    //display: none;
-  }
 
   overflow: auto;
   text-align: center;
   transition: $slowerTransitionTime;
 
-  #sideContainer {
+  .sideContainer {
     @include breakpoint-up(medium) {
       height: 100%;
     }
@@ -62,6 +44,33 @@
 
     h2:not(.subtitle) {
       margin-bottom: $smallSpacing;
+    }
+  }
+}
+
+.sidePanel {
+  @include breakpoint-up(medium) {
+    width: calc(97vw / 5);
+    min-width: $setWidthSmall;
+    padding: $largeSpacing;
+  }
+
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.footer {
+  display: none;
+
+  @include breakpoint-down(small) {
+    display: block;
+    margin-top: $largeSpacing;
+    padding: 0;
+    background: none;
+
+    .sideContainer > * {
+      margin-bottom: $mediumSpacing;
     }
   }
 }

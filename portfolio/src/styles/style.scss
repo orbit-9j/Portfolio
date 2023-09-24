@@ -91,10 +91,11 @@ main {
   display: flex;
 
   @include breakpoint-down(small) {
-    display: flex;
     flex-direction: column;
     height: 97vh;
     width: 95vw;
+
+    overflow: auto;
   }
 }
 
@@ -106,9 +107,10 @@ main {
   transition: $slowerTransitionTime;
   overflow: auto;
 
-  /* @include breakpoint-down(small) {
-    margin-top: 0;
-  } */
+  @include breakpoint-down(small) {
+    height: 100%;
+    order: 1;
+  }
 }
 
 .button {

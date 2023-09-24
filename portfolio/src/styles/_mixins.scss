@@ -52,7 +52,7 @@ $breakpoints-down: (
 @mixin card {
   @include background-gradient-dark;
   border-radius: $xSmallSpacing;
-  box-shadow: 0px 0.1875rem 0.75rem rgba(0, 0, 0, 1);
+  box-shadow: 0 $xSmallSpacing $smallSpacing rgba(9, 12, 9, 0.85);
   //overflow: hidden;
   .contents {
     padding: $mediumSpacing 1.875rem;

@@ -1,9 +1,55 @@
-.sidePanel {
+.sidePanel,
+.footer {
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   overflow: auto;
   text-align: center;
   transition: 500ms;
 }
+.sidePanel .sideContainer,
+.footer .sideContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 40em) {
+  .sidePanel .sideContainer,
+  .footer .sideContainer {
+    height: 100%;
+  }
+}
+.sidePanel .sideContainer a,
+.footer .sideContainer a {
+  text-decoration: none;
+  color: rgb(244, 255, 239);
+}
+.sidePanel .sideContainer a:hover, .sidePanel .sideContainer a:visited,
+.footer .sideContainer a:hover,
+.footer .sideContainer a:visited {
+  color: rgb(244, 255, 239);
+}
+.sidePanel .sideContainer h1,
+.footer .sideContainer h1 {
+  transition: 200ms ease-in-out;
+}
+.sidePanel .sideContainer h1:hover,
+.footer .sideContainer h1:hover {
+  color: rgb(255, 113, 30);
+}
+.sidePanel .sideContainer img,
+.footer .sideContainer img {
+  max-height: 1.875rem;
+  max-width: 1.875rem;
+}
+.sidePanel .sideContainer img:not(:last-child),
+.footer .sideContainer img:not(:last-child) {
+  margin-right: 0.3125rem;
+}
+.sidePanel .sideContainer h2:not(.subtitle),
+.footer .sideContainer h2:not(.subtitle) {
+  margin-bottom: 0.625rem;
+}
+
 @media (min-width: 40em) {
   .sidePanel {
     width: 19.4vw;
@@ -11,53 +57,25 @@
     padding: 3.125rem;
   }
 }
-@media (max-width: 63.9375em) {
-  .sidePanel {
-    padding: 3.125rem 1.25rem;
-    min-width: 15.625rem;
-  }
-}
 @media (max-width: 39.9375em) {
   .sidePanel {
+    display: none;
+  }
+}
+
+.footer {
+  display: none;
+}
+@media (max-width: 39.9375em) {
+  .footer {
+    display: block;
+    margin-top: 3.125rem;
     padding: 0;
-    order: 2;
-    height: 30vh;
-    position: relative;
+    background: none;
   }
-}
-.sidePanel #sideContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-@media (min-width: 40em) {
-  .sidePanel #sideContainer {
-    height: 100%;
+  .footer .sideContainer > * {
+    margin-bottom: 1.25rem;
   }
-}
-.sidePanel #sideContainer a {
-  text-decoration: none;
-  color: rgb(244, 255, 239);
-}
-.sidePanel #sideContainer a:hover, .sidePanel #sideContainer a:visited {
-  color: rgb(244, 255, 239);
-}
-.sidePanel #sideContainer h1 {
-  transition: 200ms ease-in-out;
-}
-.sidePanel #sideContainer h1:hover {
-  color: rgb(255, 113, 30);
-}
-.sidePanel #sideContainer img {
-  max-height: 1.875rem;
-  max-width: 1.875rem;
-}
-.sidePanel #sideContainer img:not(:last-child) {
-  margin-right: 0.3125rem;
-}
-.sidePanel #sideContainer h2:not(.subtitle) {
-  margin-bottom: 0.625rem;
 }
 
 .header {
@@ -153,7 +171,7 @@
 .mainPanel .projects .grid .project {
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
-  box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
+  box-shadow: 0 0.3125rem 0.625rem rgba(9, 12, 9, 0.85);
   transition: all 200ms ease-in-out;
 }
 .mainPanel .projects .grid .project .contents {
@@ -242,7 +260,7 @@
 .project-desc .textContainer {
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
-  box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
+  box-shadow: 0 0.3125rem 0.625rem rgba(9, 12, 9, 0.85);
   margin-top: 3.125rem;
   padding: 1.25rem;
   display: grid;
@@ -301,7 +319,7 @@
   position: relative;
   background: linear-gradient(to right bottom, rgba(244, 255, 239, 0.05), rgba(244, 255, 239, 0.035));
   border-radius: 0.3125rem;
-  box-shadow: 0px 0.1875rem 0.75rem rgb(0, 0, 0);
+  box-shadow: 0 0.3125rem 0.625rem rgba(9, 12, 9, 0.85);
 }
 .carousel .contents {
   padding: 1.25rem 1.875rem;
@@ -397,11 +415,12 @@ nav {
   transition: 200ms ease-in-out;
   background-color: #20261e;
   z-index: 2;
+  box-shadow: 0 0.3125rem 0.625rem rgba(9, 12, 9, 0.85);
 }
 nav #menu-container {
   display: flex;
   justify-content: center;
-  height: 4.6875rem;
+  padding: 1.25rem;
 }
 @media (max-width: 39.9375em) {
   nav #menu-container {
@@ -552,23 +571,26 @@ main {
 }
 @media (max-width: 39.9375em) {
   main {
-    display: flex;
     flex-direction: column;
     height: 97vh;
     width: 95vw;
+    overflow: auto;
   }
 }
 
 .mainPanel {
   transition: 500ms;
   overflow: auto;
-  /* @include breakpoint-down(small) {
-    margin-top: 0;
-  } */
 }
 @media (min-width: 40em) {
   .mainPanel {
     width: 77.6vw;
+  }
+}
+@media (max-width: 39.9375em) {
+  .mainPanel {
+    height: 100%;
+    order: 1;
   }
 }
 
