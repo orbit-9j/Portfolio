@@ -4,7 +4,6 @@ export default function Navbar() {
   const openSidePanel = () => {
     document.getElementById("menu-container").style.height = "100%";
     document.getElementById("menu-container").style.display = "flex";
-    /* document.getElementById("main").style.marginTop = "0"; */
     document.getElementById("open").style.display = "none";
     document.getElementById("close").style.display = "block";
   };
@@ -30,6 +29,9 @@ export default function Navbar() {
       <div id="menu-container">
         <Link to="/" className="link">
           Portfolio
+        </Link>
+        <Link to="/activities" className="link">
+          Activities
         </Link>
         <a href="https://github.com/orbit-9j" target="_blank">
           GitHub

@@ -6,6 +6,7 @@ import games from "./data/games";
 import ProjectPage from "./pages/Project";
 import Home from "./pages/Home";
 import AboutMe from "./pages/About";
+import Activities from "./pages/Activities";
 
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
@@ -26,6 +27,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/:title" element={<ProjectPage items={items} />} />
+              <Route path="/Activities" element={<Activities />} />
               <Route path="/About" element={<AboutMe />} />
               <Route
                 path="*"

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
+//rewrite. like, if props.imgs then carousel, else no carousel just embedded images in specific sections
 //---------------carousel------------------
 function Image(Props) {
   var imagePath = process.env.PUBLIC_URL + "/images/";
