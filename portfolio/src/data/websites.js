@@ -5,7 +5,7 @@ export default [
     image: "LC.png",
     title: "Learning Company Redesign",
     description:
-      "A website redesign made with HTML, styled with Sass, and hosted on GitHub Pages. Feedback for the original website is provided on the Feedback page.",
+      "A website redesign made with Vue JS, styled with Sass, and hosted on GitHub Pages. Feedback for the original website is provided on the Feedback page.",
     websiteLink: "https://orbit-9j.github.io/LearningCompanyRedesign/",
     githubLink: "https://github.com/orbit-9j/LearningCompanyRedesign",
     timestamp: "Ongoing",
