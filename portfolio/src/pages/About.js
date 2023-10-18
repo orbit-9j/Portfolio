@@ -22,9 +22,9 @@ export default function AboutMe() {
           limited to) video game and front end web development. I am also
           interested in creative fields such as storytelling and visual arts. I
           like using bright and dark colours in my designs, challenging the
-          neutral black and white colour scheme norm. I want to designin
-          websites that are fun and unique, yet clean and professional. Here are
-          some of my inspirations.
+          neutral black and white colour scheme norm. I want to design websites
+          that are fun and unique, yet clean and professional. Here are some of
+          my inspirations.
         </p>
         <h3>Websites</h3>
         <ul>
