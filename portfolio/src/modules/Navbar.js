@@ -36,12 +36,9 @@ export default function Navbar() {
         <a href="https://github.com/orbit-9j" target="_blank">
           GitHub
         </a>
-        <a
-          href="https://github.com/orbit-9j/cv/blob/main/Rin_Tian_CV.pdf"
-          target="_blank"
-        >
+        <Link to="/CVs" className="link">
           CV
-        </a>
+        </Link>
         <Link to="/About">About Me</Link>
       </div>
     </nav>

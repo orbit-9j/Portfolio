@@ -8,6 +8,7 @@ import ProjectPage from "./pages/Project";
 import Home from "./pages/Home";
 import AboutMe from "./pages/About";
 import Activities from "./pages/Activities";
+import CVs from "./pages/CVs";
 
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
@@ -32,6 +33,7 @@ function App() {
                 element={<ProjectPage items={activities} />}
               />
               <Route path="/Activities" element={<Activities />} />
+              <Route path="/CVs" element={<CVs />} />
               <Route path="/About" element={<AboutMe />} />
               <Route
                 path="*"

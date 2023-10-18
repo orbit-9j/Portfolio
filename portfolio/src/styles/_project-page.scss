@@ -26,6 +26,11 @@
     }
   }
 
+  h3 {
+    font-size: $mainFont;
+    margin-top: $mediumSpacing;
+  }
+
   .textContainer {
     @include card;
     margin-top: $largeSpacing;

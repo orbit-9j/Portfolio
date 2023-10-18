@@ -1,15 +1,5 @@
 export default [
   {
-    id: 2,
-    type: "other",
-    image: "CV.png",
-    title: "CV",
-    description: "My CV written in LaTeX.",
-    timestamp: "Completed 02/08/2023",
-    githubLink: "https://github.com/orbit-9j/cv",
-    websiteLink: "https://github.com/orbit-9j/cv/blob/main/Rin_Tian_CV.pdf",
-  },
-  {
     id: 1,
     type: "other",
     image: "HCI.png",

@@ -21,25 +21,27 @@ export default function AboutMe() {
           I enjoy projects that combine coding and graphics, such as (but not
           limited to) video game and front end web development. I am also
           interested in creative fields such as storytelling and visual arts. I
-          am interested in using bright and dark colours in my designs, straying
-          from the neutral black and white colour scheme norm. I have taken on
-          the challenge of designing websites that are fun and unique, while
-          also looking clean and smart. My designs are partly inspired by the
-          nostalgia of old 2010s blog websites and skeuomorphic UI. Here are
-          some of my inspirations:
+          like using bright and dark colours in my designs, challenging the
+          neutral black and white colour scheme norm. I want to designin
+          websites that are fun and unique, yet clean and professional. Here are
+          some of my inspirations.
         </p>
+        <h3>Websites</h3>
+        <ul>
+          <li>Skeuomorphism and glassmorphism</li>
+          <li>Colours: black, green, orange, purple</li>
+        </ul>
+        <h3>Games</h3>
         <ul>
           <li>Horror fiction</li>
           <li>Surrealism</li>
           <li>Sci-fi, aliens, astronomy</li>
           <li>Pixel art top-down RPG games</li>
           <li>Satirical and absurdist humour</li>
-          <li>Skeuomorphism and glassmorphism</li>
-          <li>Colours: black, green, orange, purple</li>
         </ul>
       </div>
 
-      <div className="textContainer">
+      {/* <div className="textContainer">
         <h2>Personal attributes</h2>
         <ul>
           <li>Thrives on routines</li>
@@ -49,13 +51,16 @@ export default function AboutMe() {
           <li>Notices and applies patterns</li>
           <li>Actively searches for ways to improve</li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="textContainer">
         <h2>Hobbies and Interests</h2>
         <ul>
           <li>Knowledge management</li>
           <li>Speedcubing</li>
+          <ul>
+            <li>3x3 Personal Best: 40 seconds</li>
+          </ul>
           <li>Languages</li>
           <ul>
             <li>Fluent: English, Russian</li>
@@ -73,7 +78,7 @@ export default function AboutMe() {
           <li>Learn the Godot game engine</li>
           <li>Make a full-length game in my art style</li>
           <li>Improve UI design skills</li>
-          <li>Get better at JavaScript </li>
+          <li>Practise JavaScript and Vue JS</li>
         </ul>
       </div>
     </section>
