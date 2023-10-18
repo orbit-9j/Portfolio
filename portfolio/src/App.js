@@ -2,6 +2,7 @@ import SidePanel from "./modules/SidePanel";
 import Navbar from "./modules/Navbar";
 
 import games from "./data/games";
+import activities from "./data/activities";
 
 import ProjectPage from "./pages/Project";
 import Home from "./pages/Home";
@@ -11,14 +12,10 @@ import Activities from "./pages/Activities";
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
-/* import ScrollToTop from "react-router-scroll-top"; */ /* yarn add react-router-scroll-top - supposed to fix the new page loading in previous scrolling position */
-
 function App() {
   var imagePath = process.env.PUBLIC_URL + "/images/side-panel/";
-  const items = games;
   return (
     <Router>
-      {/* <ScrollToTop> */}
       <main>
         <SidePanel />
         <section id="main" className="mainPanel">
@@ -26,7 +23,14 @@ function App() {
           <section className="projects">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/:title" element={<ProjectPage items={items} />} />
+              <Route
+                path="/games/:title"
+                element={<ProjectPage items={games} />}
+              />
+              <Route
+                path="/activities/:title"
+                element={<ProjectPage items={activities} />}
+              />
               <Route path="/Activities" element={<Activities />} />
               <Route path="/About" element={<AboutMe />} />
               <Route
@@ -54,7 +58,7 @@ function App() {
                   <h2 className="heading">Profile</h2>
                   <p>
                     Recent BSc Computer Science graduate with an interest in
-                    graphical projects.
+                    graphical coding projects.
                   </p>
                 </div>
 

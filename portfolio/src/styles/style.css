@@ -32,6 +32,12 @@
 .footer .sideContainer h1 {
   transition: 200ms ease-in-out;
 }
+@media (max-width: 63.9375em) {
+  .sidePanel .sideContainer h1,
+  .footer .sideContainer h1 {
+    font-size: 1.875rem;
+  }
+}
 .sidePanel .sideContainer h1:hover,
 .footer .sideContainer h1:hover {
   color: rgb(255, 113, 30);
@@ -49,11 +55,23 @@
 .footer .sideContainer h2:not(.subtitle) {
   margin-bottom: 0.625rem;
 }
+@media (max-width: 63.9375em) {
+  .sidePanel .sideContainer h2,
+  .footer .sideContainer h2 {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .sidePanel .sideContainer p,
+  .footer .sideContainer p {
+    font-size: 0.875rem;
+  }
+}
 
 @media (min-width: 40em) {
   .sidePanel {
     width: 19.4vw;
-    min-width: 11.25rem;
+    min-width: 9.375rem;
     padding: 3.125rem;
   }
 }
@@ -439,7 +457,7 @@ nav Link {
   text-decoration: none;
   align-self: center;
   color: #ff9151;
-  padding: 0 3.125rem;
+  padding: 0 5%;
 }
 nav a:hover,
 nav Link:hover {
@@ -453,6 +471,7 @@ nav Link:not(:last-child) {
   nav a,
   nav Link {
     padding: 0 1.25rem;
+    font-size: 0.875rem;
   }
 }
 @media (max-width: 39.9375em) {

@@ -88,14 +88,13 @@ function Body() {
           card.type === "website" || card.type === "other"
             ? card.websiteLink
             : card.type === "game"
-            ? `/${card.title}`
+            ? `/games/${card.title}`
             : null
         }
         githubLink={card.githubLink ? card.githubLink : null}
         path={
           card.path !== null ? process.env.PUBLIC_URL + "/" + card.path : null
         }
-        content={card.content ? card.content : null}
         id={card.id}
         timestamp={card.timestamp}
       />

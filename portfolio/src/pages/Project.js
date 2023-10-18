@@ -82,17 +82,17 @@ const ProjectPage = ({ items }) => {
   const { title } = useParams(); //receives the title of the page from the link
   return (
     <React.Fragment>
-      {/* searches for the list item with this title in the games file */}
+      {/* searches for the list item with this title in the given file */}
       {items
-        .filter((game) => game.title === title)
-        .map((game, index) => (
+        .filter((project) => project.title === title)
+        .map((project, index) => (
           <section key={index} className="project-desc">
-            <h1>{game.title}</h1>
+            <h1>{project.title}</h1>
             {/*  <hr /> */}
-            <Carousel IA={game.images} />
+            <Carousel IA={project.images} />
 
             <div>
-              {game.cards.map((card, index) => (
+              {project.cards.map((card, index) => (
                 <div key={index} className="textContainer">
                   <h2>{card[0]}</h2>
                   {card.slice(1).map((content, index) =>
@@ -111,10 +111,10 @@ const ProjectPage = ({ items }) => {
             </div>
 
             <div className="button-wrapper">
-              {game.githubLink ? (
+              {project.githubLink ? (
                 <a
                   className="view-github project-button button button-primary"
-                  href={game.githubLink}
+                  href={project.githubLink}
                   target="_blank"
                 >
                   <button className="button button-primary project-button">
@@ -123,8 +123,8 @@ const ProjectPage = ({ items }) => {
                 </a>
               ) : null}
 
-              {game.extraSources
-                ? game.extraSources.map((source) => (
+              {project.extraSources
+                ? project.extraSources.map((source) => (
                     <a
                       key={Object.keys(source)[0]}
                       className="view-github project-button button button-secondary"

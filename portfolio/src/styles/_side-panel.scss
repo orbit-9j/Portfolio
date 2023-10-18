@@ -27,6 +27,9 @@
 
     h1 {
       transition: $transitionTime ease-in-out;
+      @include breakpoint-down(medium) {
+        font-size: $mobileHeadingFont;
+      }
     }
 
     h1:hover {
@@ -44,6 +47,18 @@
 
     h2:not(.subtitle) {
       margin-bottom: $smallSpacing;
+    }
+
+    h2 {
+      @include breakpoint-down(medium) {
+        font-size: $mobileSubheadingFont;
+      }
+    }
+
+    p {
+      @include breakpoint-down(medium) {
+        font-size: $mobileMainFont;
+      }
     }
   }
 }

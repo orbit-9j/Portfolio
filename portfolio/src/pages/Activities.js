@@ -19,6 +19,7 @@ export default function Activities() {
               location={card.location}
               desc={card.description}
               id={card.id}
+              contents={card.contents}
             />
           ))}
         </div>
@@ -44,15 +45,15 @@ function Card(Props) {
           <p className="description">{Props.desc}</p>
         </div>
 
-        {/* <div className="buttons">
+        <div className="buttons">
           <Link
             className="view-button button button-primary"
-            to={`/${Props.title}`}
+            to={`/activities/${Props.title}`}
             state={Props.id}
           >
             View Details
           </Link>
-        </div> */}
+        </div>
       </div>
     </div>
   );

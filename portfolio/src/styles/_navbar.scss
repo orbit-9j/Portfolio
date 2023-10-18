@@ -31,7 +31,7 @@ nav {
     text-decoration: none;
     align-self: center;
     color: $lightAccent;
-    padding: 0 $largeSpacing;
+    padding: 0 5%; //dynamic padding helps prevent unappealing squishing of links on different "large" screens
 
     &:hover {
       color: $light;
@@ -43,6 +43,7 @@ nav {
 
     @include breakpoint-down(medium) {
       padding: 0 $mediumSpacing;
+      font-size: $mobileMainFont;
     }
 
     @include breakpoint-down(small) {
