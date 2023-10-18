@@ -43,18 +43,23 @@
     justify-content: center;
     gap: $mediumSpacing;
 
+    @include breakpoint-down(medium) {
+      margin-top: $mediumSpacing;
+    }
+
     @include breakpoint-down(small) {
       flex-wrap: wrap;
-      margin-top: $mediumSpacing;
+      flex-direction: column;
       gap: $smallSpacing;
     }
 
-    a {
-      padding: 0;
-    }
-
     .project-button {
-      width: $setWidth;
+      @include breakpoint-up(large) {
+        width: $setWidth;
+      }
+      @include breakpoint-down(medium) {
+        flex: 1;
+      }
       text-align: center;
       margin: 0;
 

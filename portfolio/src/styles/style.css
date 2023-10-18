@@ -229,20 +229,17 @@
   color: grey;
 }
 .mainPanel .projects .grid .project .contents .buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 1.25rem;
-  width: 100%;
-  align-items: stretch;
-  justify-items: stretch;
 }
 @media (max-width: 39.9375em) {
   .mainPanel .projects .grid .project .contents .buttons {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 0.625rem;
   }
 }
 .mainPanel .projects .grid .project .contents .buttons a {
+  flex: 1;
   text-decoration: none;
 }
 .mainPanel .projects .grid .project .contents .buttons a button {
@@ -303,20 +300,31 @@
   justify-content: center;
   gap: 1.25rem;
 }
+@media (max-width: 63.9375em) {
+  .project-desc .button-wrapper {
+    margin-top: 1.25rem;
+  }
+}
 @media (max-width: 39.9375em) {
   .project-desc .button-wrapper {
     flex-wrap: wrap;
-    margin-top: 1.25rem;
+    flex-direction: column;
     gap: 0.625rem;
   }
 }
-.project-desc .button-wrapper a {
-  padding: 0;
-}
 .project-desc .button-wrapper .project-button {
-  width: 15.625rem;
   text-align: center;
   margin: 0;
+}
+@media (min-width: 64em) {
+  .project-desc .button-wrapper .project-button {
+    width: 15.625rem;
+  }
+}
+@media (max-width: 63.9375em) {
+  .project-desc .button-wrapper .project-button {
+    flex: 1;
+  }
 }
 @media (max-width: 39.9375em) {
   .project-desc .button-wrapper .project-button {
@@ -630,6 +638,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 .button:hover {
   cursor: pointer;
@@ -652,8 +661,7 @@ main {
 
 .button-secondary {
   color: rgb(255, 113, 30);
-  border-width: 0.1875rem;
-  border-color: rgb(255, 113, 30);
+  border: 0.125rem solid rgb(255, 113, 30);
   background-color: transparent;
 }
 .button-secondary:hover {

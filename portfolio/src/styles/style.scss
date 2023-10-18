@@ -124,6 +124,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 
   &:hover {
     cursor: pointer;
@@ -155,8 +156,7 @@ main {
 
 .button-secondary {
   color: $accent;
-  border-width: 0.1875rem;
-  border-color: $accent;
+  border: $borderWidth solid $accent;
   background-color: transparent;
 
   &:hover {

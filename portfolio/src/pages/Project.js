@@ -117,9 +117,7 @@ const ProjectPage = ({ items }) => {
                   href={project.githubLink}
                   target="_blank"
                 >
-                  <button className="button button-primary project-button">
-                    View Source
-                  </button>
+                  View Source
                 </a>
               ) : null}
 
@@ -127,13 +125,11 @@ const ProjectPage = ({ items }) => {
                 ? project.extraSources.map((source) => (
                     <a
                       key={Object.keys(source)[0]}
-                      className="view-github project-button button button-secondary"
+                      className="view-github button project-button button-secondary"
                       href={Object.values(source)[0]}
                       target="_blank"
                     >
-                      <button className="button button-secondary project-button">
-                        {Object.keys(source)[0]}
-                      </button>
+                      {Object.keys(source)[0]}
                     </a>
                   ))
                 : null}

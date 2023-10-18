@@ -30,7 +30,7 @@ export default function Activities() {
 
 function Card(Props) {
   return (
-    <div className="project">
+    <div className="project" key={Props.id}>
       <div className="image-container">
         <img className="image" src={Props.img} alt="" />
       </div>

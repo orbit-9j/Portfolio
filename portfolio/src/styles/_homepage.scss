@@ -117,19 +117,16 @@
         }
 
         .buttons {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
           gap: $mediumSpacing;
-          width: 100%;
-          align-items: stretch;
-          justify-items: stretch;
 
           @include breakpoint-down(small) {
-            grid-template-columns: 1fr;
+            flex-direction: column;
             gap: $smallSpacing;
           }
 
           a {
+            flex: 1;
             text-decoration: none;
             button {
               width: 100%;
