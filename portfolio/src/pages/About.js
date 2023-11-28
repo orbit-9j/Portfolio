@@ -59,7 +59,7 @@ export default function AboutMe() {
           <li>Knowledge management</li>
           <li>Speedcubing</li>
           <ul>
-            <li>3x3 Personal Best: 40 seconds</li>
+            <li>3x3 Personal Best: 36 seconds</li>
           </ul>
           <li>Languages</li>
           <ul>

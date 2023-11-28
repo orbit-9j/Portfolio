@@ -1,5 +1,16 @@
 export default [
   {
+    id: 9,
+    type: "website",
+    image: "pool.png",
+    title: "Swimming Pool Services Website",
+    description:
+      "A multilingual website mockup for a client made with HTML, styled with Sass, and hosted on GitHub Pages.",
+    websiteLink: "https://orbit-9j.github.io/poolsite/",
+    githubLink: "https://github.com/orbit-9j/poolsite",
+    timestamp: "Paused 05/11/2023",
+  },
+  {
     id: 8,
     type: "website",
     image: "LC.png",
@@ -8,7 +19,7 @@ export default [
       "A website redesign made with Vue JS, styled with Sass, and hosted on GitHub Pages. Feedback for the original website is provided on the Feedback page.",
     websiteLink: "https://orbit-9j.github.io/LearningCompanyRedesign/",
     githubLink: "https://github.com/orbit-9j/LearningCompanyRedesign",
-    timestamp: "Ongoing",
+    timestamp: "Paused 01/10/2023",
   },
   {
     id: 6,
