@@ -3,12 +3,12 @@ export default [
     id: 9,
     type: "website",
     image: "pool.png",
-    title: "Swimming Pool Services Website",
+    title: "PoolMaster.pt",
     description:
-      "A multilingual website mockup for a client made with HTML, styled with Sass, and hosted on GitHub Pages.",
-    websiteLink: "https://orbit-9j.github.io/poolsite/",
-    githubLink: "https://github.com/orbit-9j/poolsite",
-    timestamp: "Paused 05/11/2023",
+      "A multilingual HTML website for swimming pool services styled with SASS and online shop made with Shopify, hosted on PTServidor. Includes SEO. Freelance project.",
+    websiteLink: "http://poolmaster.pt/",
+    githubLink: "",
+    timestamp: "Ongoing",
   },
   {
     id: 8,
