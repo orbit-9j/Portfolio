@@ -5,7 +5,7 @@ export default [
     image: "pool.png",
     title: "PoolMaster.pt",
     description:
-      "A multilingual HTML website for swimming pool services styled with SASS and online shop made with Shopify, hosted on PTServidor. Includes SEO. Freelance project.",
+      "A bilingual HTML website for swimming pool services styled with SASS and online shop made with Shopify, hosted on PTServidor. Includes SEO. Freelance project.",
     websiteLink: "http://poolmaster.pt/",
     githubLink: "",
     timestamp: "Ongoing",
