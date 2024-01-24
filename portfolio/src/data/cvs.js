@@ -8,7 +8,7 @@ export default [
     GHlink: "https://github.com/orbit-9j/cv/tree/main/Web%20dev",
     description: "My CV written in LaTeX.",
   },
-  {
+  /* {
     id: 9159195,
     img: "CVs/game.png",
     title: "Game Developer",
@@ -16,5 +16,5 @@ export default [
       "https://github.com/orbit-9j/cv/blob/main/Game%20Dev/Rin_Tian_CV_Game.pdf",
     GHlink: "https://github.com/orbit-9j/cv/tree/main/Game%20Dev",
     description: "My CV written in LaTeX.",
-  },
+  }, */
 ];
