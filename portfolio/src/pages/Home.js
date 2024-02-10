@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 function Body() {
   const cards = [...websites, ...games, ...other];
 
+  //--------------------------------- start filter dropdown ---------------------------------
+
   const [selectedType, setSelectedType] = useState("all");
 
   //update the state with new filter
@@ -74,6 +76,8 @@ function Body() {
     return <h2 className="projects__category">{finalType}</h2>;
   };
 
+  //--------------------------------- end filter dropdown ---------------------------------
+
   function CardComponent({ card }) {
     return (
       <Card
@@ -99,6 +103,75 @@ function Body() {
         timestamp={card.timestamp}
       />
     );
+  }
+
+  function Card(Props) {
+    return (
+      <div className="project">
+        <div className="image-container">
+          <img className="image" src={Props.img} alt="" />
+        </div>
+
+        <div className="contents">
+          <div>
+            <h3 className="title">{Props.title}</h3>
+            <p className="timestamp">{Props.timestamp}</p>
+          </div>
+          <div>
+            <p className="description">{Props.desc}</p>
+            {Props.score !== null ? (
+              <p className="score">Scored {Props.score} in assessment</p>
+            ) : null}
+          </div>
+
+          <div className="buttons">
+            {LinkDecider(Props)}
+            {Props.githubLink !== null ? (
+              <a
+                className="button button-secondary"
+                href={Props.githubLink}
+                target="_blank"
+              >
+                View Source
+              </a>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  //note to self: props is the attributes passed into card, so websiteLink becomes link (I should really just name them the same to avoid confusion huh)
+  function LinkDecider(Props) {
+    //decides whether to open a project page (for a game) or an external website (for a website), etc
+    if (Props.type === "game") {
+      return (
+        <Link
+          className=" button button-primary"
+          to={Props.link}
+          state={Props.id}
+        >
+          {Props.button}
+        </Link>
+      );
+    } else if (
+      (Props.type === "website" || Props.type === "other") &&
+      Props.link
+    ) {
+      return (
+        <a className=" button button-primary" href={Props.link} target="_blank">
+          {Props.button}
+        </a>
+      );
+    } else if (Props.type === "other" && Props.path) {
+      return (
+        <a className=" button button-primary" href={Props.path} target="_blank">
+          {Props.button}
+        </a>
+      );
+    } else {
+      return null;
+    }
   }
 
   return (
@@ -147,71 +220,6 @@ function Body() {
       </div>
     </React.Fragment>
     //</section>
-  );
-}
-
-//note to self: props is the attributes passed into card, so websiteLink becomes link (I should really just name them the same to avoid confusion huh)
-function LinkDecider(Props) {
-  //decides whether to open a project page (for a game) or an external website (for a website), etc
-  if (Props.type === "game") {
-    return (
-      <Link className=" button button-primary" to={Props.link} state={Props.id}>
-        {Props.button}
-      </Link>
-    );
-  } else if (
-    (Props.type === "website" || Props.type === "other") &&
-    Props.link
-  ) {
-    return (
-      <a className=" button button-primary" href={Props.link} target="_blank">
-        {Props.button}
-      </a>
-    );
-  } else if (Props.type === "other" && Props.path) {
-    return (
-      <a className=" button button-primary" href={Props.path} target="_blank">
-        {Props.button}
-      </a>
-    );
-  } else {
-    return null;
-  }
-}
-
-function Card(Props) {
-  return (
-    <div className="project">
-      <div className="image-container">
-        <img className="image" src={Props.img} alt="" />
-      </div>
-
-      <div className="contents">
-        <div>
-          <h3 className="title">{Props.title}</h3>
-          <p className="timestamp">{Props.timestamp}</p>
-        </div>
-        <div>
-          <p className="description">{Props.desc}</p>
-          {Props.score !== null ? (
-            <p className="score">Scored {Props.score} in assessment</p>
-          ) : null}
-        </div>
-
-        <div className="buttons">
-          {LinkDecider(Props)}
-          {Props.githubLink !== null ? (
-            <a
-              className="button button-secondary"
-              href={Props.githubLink}
-              target="_blank"
-            >
-              View Source
-            </a>
-          ) : null}
-        </div>
-      </div>
-    </div>
   );
 }
 
