@@ -79,6 +79,7 @@ function Body() {
   //--------------------------------- end filter dropdown ---------------------------------
 
   function CardComponent({ card }) {
+    //a component that assigns values to Card. i specifically made it its own thing because Card is called twice in the body code and it would be a pain to change the arguments in 2 separate places if needed
     return (
       <Card
         key={card.id}
@@ -87,18 +88,7 @@ function Body() {
         title={card.title}
         desc={card.description}
         score={card.score ? card.score : null}
-        button={card.type === "website" ? "Go To Site" : "View Details"}
-        link={
-          card.type === "website" || card.type === "other"
-            ? card.websiteLink
-            : card.type === "game"
-            ? `/games/${card.title}`
-            : null
-        }
-        githubLink={card.githubLink ? card.githubLink : null}
-        path={
-          card.path !== null ? process.env.PUBLIC_URL + "/" + card.path : null
-        }
+        links={card.links}
         id={card.id}
         timestamp={card.timestamp}
       />
@@ -125,57 +115,42 @@ function Body() {
           </div>
 
           <div className="buttons">
-            {LinkDecider(Props)}
-            {Props.githubLink !== null ? (
-              <a
-                className="button button-secondary"
-                href={Props.githubLink}
-                target="_blank"
-              >
-                View Source
-              </a>
-            ) : null}
+            {Props.links.slice(0, 2).map((link) =>
+              link.location ? (
+                <a
+                  key={link.id}
+                  href={
+                    link.pdf
+                      ? process.env.PUBLIC_URL + "/" + link.location
+                      : link.location
+                  }
+                  className={`button ${
+                    link.primary ? "button-primary" : "button-secondary"
+                  }`}
+                  target={link.internal ? "_self" : "_blank"}
+                  rel={link.internal ? "" : "noopener noreferrer"}
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.id}
+                  to={`/games/${Props.title}`}
+                  className={`button ${
+                    link.primary ? "button-primary" : "button-secondary"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
+            )}
           </div>
         </div>
       </div>
     );
   }
 
-  //note to self: props is the attributes passed into card, so websiteLink becomes link (I should really just name them the same to avoid confusion huh)
-  function LinkDecider(Props) {
-    //decides whether to open a project page (for a game) or an external website (for a website), etc
-    if (Props.type === "game") {
-      return (
-        <Link
-          className=" button button-primary"
-          to={Props.link}
-          state={Props.id}
-        >
-          {Props.button}
-        </Link>
-      );
-    } else if (
-      (Props.type === "website" || Props.type === "other") &&
-      Props.link
-    ) {
-      return (
-        <a className=" button button-primary" href={Props.link} target="_blank">
-          {Props.button}
-        </a>
-      );
-    } else if (Props.type === "other" && Props.path) {
-      return (
-        <a className=" button button-primary" href={Props.path} target="_blank">
-          {Props.button}
-        </a>
-      );
-    } else {
-      return null;
-    }
-  }
-
   return (
-    //<section className="projects">
     <React.Fragment>
       <div className="header">
         <div className="spacer"></div>
@@ -219,7 +194,6 @@ function Body() {
         )}
       </div>
     </React.Fragment>
-    //</section>
   );
 }
 

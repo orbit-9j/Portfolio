@@ -1,5 +1,23 @@
 export default [
   {
+    id: 5,
+    type: "game",
+    image: "MM.png",
+    title: "Mathemagica: Runes of Revival",
+    description:
+      "A concept for a game for learning basic maths. Made for a technical interview.",
+    timestamp: "Completed 20/11/2023",
+    links: [
+      {
+        id: 1,
+        name: "View Document",
+        location: "Mathemagica_ Runes of Revival.pdf",
+        primary: true,
+        pdf: true,
+      },
+    ],
+  },
+  {
     id: 4,
     type: "game",
     image: "CS.png",
@@ -8,7 +26,19 @@ export default [
       "A dissertation project that teaches cybersecurity to novices, using the Octalysis framework. Made with Unity C# + Ink scripting language. The prequel to Psychodyssey.",
     score: "74/100",
     timestamp: "Completed 12/05/2023",
-    githubLink: "https://git.cardiff.ac.uk./c2041844/fyp",
+    links: [
+      {
+        id: 1,
+        name: "View Details",
+        primary: true,
+        internal: true,
+      },
+      {
+        id: 2,
+        name: "View on GitHub",
+        location: "https://git.cardiff.ac.uk./c2041844/fyp",
+      },
+    ],
     images: [
       {
         id: 1435971,
@@ -234,12 +264,25 @@ export default [
       "A research project and prototype developed for the Design Thinking module that aims to design an effective psychological horror game. Made using Miro, Krita, and Figma.",
     score: "83/100",
     timestamp: "Completed 10/01/2023",
-    githubLink:
-      "https://miro.com/app/board/uXjVPMzhjBo=/?share_link_id=722803847643",
-    extraSources: [
+    links: [
       {
-        "Figma board":
+        id: 1,
+        name: "View Details",
+        primary: true,
+        internal: true,
+      },
+      {
+        id: 2,
+        name: "Miro Board",
+        location:
+          "https://miro.com/app/board/uXjVPMzhjBo=/?share_link_id=722803847643",
+      },
+      {
+        id: 3,
+        name: "Figma board",
+        location:
           "https://www.figma.com/file/pyHXkKKN4cn5MtXx4WpAHR/design-cw?t=gjgzJrZM4Dd0YaZP-1",
+        extra: true,
       },
     ],
     images: [
@@ -364,7 +407,19 @@ export default [
       "A multiplayer dungeon-crawler puzzle game made with Unity C# & the Mirror library for a client group project.",
     score: "66/100",
     timestamp: "Completed 16/05/2022",
-    githubLink: "https://github.com/orbit-9j/Puzzle-Dungeon",
+    links: [
+      {
+        id: 1,
+        name: "View Details",
+        primary: true,
+        internal: true,
+      },
+      {
+        id: 2,
+        name: "View on GitHub",
+        location: "https://github.com/orbit-9j/Puzzle-Dungeon",
+      },
+    ],
     images: [
       {
         id: "1",
@@ -512,7 +567,19 @@ export default [
     description:
       "Developed solo in the CyberSoc-led game jam, a game about being a crow. Made using Unity C#.",
     timestamp: "Paused 19/03/2022",
-    githubLink: "https://github.com/orbit-9j/Menace-Simulator",
+    links: [
+      {
+        id: 1,
+        name: "View Details",
+        primary: true,
+        internal: true,
+      },
+      {
+        id: 2,
+        name: "View on GitHub",
+        location: "https://github.com/orbit-9j/Menace-Simulator",
+      },
+    ],
     images: [
       {
         id: "1",
@@ -588,6 +655,13 @@ export default [
     title: "Connect 4",
     description: "The popular board game Connect 4, coded with Python.",
     timestamp: "Completed 08/2021",
-    githubLink: "https://github.com/orbit-9j/connect4",
+    links: [
+      {
+        id: 2,
+        name: "View on GitHub",
+        location: "https://github.com/orbit-9j/connect4",
+        primary: true,
+      },
+    ],
   },
 ];
