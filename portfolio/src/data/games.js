@@ -5,7 +5,7 @@ export default [
     image: "MM.png",
     title: "Mathemagica: Runes of Revival",
     description:
-      "A concept for a game for learning basic maths. Made for a technical interview.",
+      "A concept for a game teaching basic maths. Made for a technical interview.",
     timestamp: "Completed 20/11/2023",
     links: [
       {
@@ -26,6 +26,7 @@ export default [
       "A dissertation project that teaches cybersecurity to novices, using the Octalysis framework. Made with Unity C# + Ink scripting language. The prequel to Psychodyssey.",
     score: "74/100",
     timestamp: "Completed 12/05/2023",
+    featured: true,
     links: [
       {
         id: 1,
@@ -264,6 +265,7 @@ export default [
       "A research project and prototype developed for the Design Thinking module that aims to design an effective psychological horror game. Made using Miro, Krita, and Figma.",
     score: "83/100",
     timestamp: "Completed 10/01/2023",
+    featured: true,
     links: [
       {
         id: 1,

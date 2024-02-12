@@ -15,6 +15,7 @@ export default [
         primary: true,
       },
     ],
+    featured: true,
   },
   {
     id: 8,
@@ -59,6 +60,7 @@ export default [
         location: "https://github.com/orbit-9j/Tardis-Travel",
       },
     ],
+    featured: true,
   },
   {
     id: 5,
@@ -81,6 +83,7 @@ export default [
         location: "https://github.com/orbit-9j/meme-maker",
       },
     ],
+    featured: true,
   },
   {
     id: 3,
@@ -103,6 +106,7 @@ export default [
         location: "https://github.com/orbit-9j/Portfolio",
       },
     ],
+    featured: true,
   },
   {
     id: 7,

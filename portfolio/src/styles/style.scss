@@ -40,7 +40,7 @@ h1 {
   font-size: $headingFont;
   color: $light;
   text-align: center;
-  @include breakpoint-down(small) {
+  @include breakpoint-down(medium) {
     font-size: $mobileHeadingFont;
   }
 }
@@ -136,6 +136,10 @@ main {
     //transition doesn't work now
   }
 
+  @include breakpoint-down(medium) {
+    font-size: $mobileMainFont;
+  }
+
   @include breakpoint-down(small) {
     &:not(:last-child) {
       margin-bottom: 0.625rem;
@@ -146,7 +150,9 @@ main {
 }
 
 .button-primary {
-  border-width: 0;
+  //border: $borderWidth solid rgba(255, 255, 255, 0);
+  border: none;
+  padding: calc($smallSpacing + $borderWidth);
   background: linear-gradient(
     to right bottom,
     rgba(red($accent), green($accent), blue($accent), 1),

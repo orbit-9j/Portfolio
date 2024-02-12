@@ -1,51 +1,42 @@
 .header {
   align-items: center;
   justify-content: center;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: $smallSpacing;
+  display: flex;
+  flex-direction: column;
+  gap: $mediumSpacing;
 
   @include breakpoint-down(small) {
-    gap: 0;
+    gap: $smallSpacing;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .spacer {
-    width: 6.25rem;
-    //background-color: green;
-
-    @include breakpoint-down(small) {
-      width: 0;
-      height: 0;
-    }
-  }
-
   .filter {
     display: flex;
-    gap: $smallSpacing;
-    justify-content: center;
+    flex-direction: row;
+    height: 100%;
     align-items: center;
-    @include breakpoint-down(medium) {
-      margin-top: $mediumSpacing;
-    }
-
+    gap: $smallSpacing;
     label {
       color: $light;
     }
+  }
 
-    select {
-      text-transform: capitalize;
-      padding: $smallSpacing;
-      background-color: $accent;
-      border-radius: $largeBorderRadius;
-      font-size: $smallFont;
-      border: none;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: $smallSpacing;
+    justify-content: center;
+    align-items: center;
 
-      option {
-        text-transform: capitalize;
-      }
+    .button {
+      margin-bottom: 0px;
+    }
+
+    @include breakpoint-down(small) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

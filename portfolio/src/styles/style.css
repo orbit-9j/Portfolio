@@ -99,51 +99,43 @@
 .header {
   align-items: center;
   justify-content: center;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 @media (max-width: 39.9375em) {
   .header {
-    gap: 0;
+    gap: 0.625rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.header .spacer {
-  width: 6.25rem;
-}
-@media (max-width: 39.9375em) {
-  .header .spacer {
-    width: 0;
-    height: 0;
-  }
-}
 .header .filter {
   display: flex;
-  gap: 0.625rem;
-  justify-content: center;
+  flex-direction: row;
+  height: 100%;
   align-items: center;
-}
-@media (max-width: 63.9375em) {
-  .header .filter {
-    margin-top: 1.25rem;
-  }
+  gap: 0.625rem;
 }
 .header .filter label {
   color: rgb(244, 255, 239);
 }
-.header .filter select {
-  text-transform: capitalize;
-  padding: 0.625rem;
-  background-color: rgb(255, 113, 30);
-  border-radius: 1.875rem;
-  font-size: 0.875rem;
-  border: none;
+.header .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
 }
-.header .filter select option {
-  text-transform: capitalize;
+.header .buttons .button {
+  margin-bottom: 0px;
+}
+@media (max-width: 39.9375em) {
+  .header .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .mainPanel .projects {
@@ -553,7 +545,7 @@ h1 {
   color: rgb(244, 255, 239);
   text-align: center;
 }
-@media (max-width: 39.9375em) {
+@media (max-width: 63.9375em) {
   h1 {
     font-size: 1.875rem;
   }
@@ -648,6 +640,11 @@ main {
   cursor: pointer;
   background: linear-gradient(to right bottom, #d14d00, rgba(209, 77, 0, 0.5));
 }
+@media (max-width: 63.9375em) {
+  .button {
+    font-size: 0.875rem;
+  }
+}
 @media (max-width: 39.9375em) {
   .button {
     padding: 0.625rem;
@@ -659,7 +656,8 @@ main {
 }
 
 .button-primary {
-  border-width: 0;
+  border: none;
+  padding: 0.75rem;
   background: linear-gradient(to right bottom, rgb(255, 113, 30), rgba(255, 113, 30, 0.5));
 }
 

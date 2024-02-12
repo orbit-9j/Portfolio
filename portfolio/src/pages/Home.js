@@ -8,75 +8,71 @@ import { Link } from "react-router-dom";
 function Body() {
   const cards = [...websites, ...games, ...other];
 
-  //--------------------------------- start filter dropdown ---------------------------------
+  //--------------------------------- start filter buttons ---------------------------------
+  const [selectedType, setSelectedType] = useState("featured");
 
-  const [selectedType, setSelectedType] = useState("all");
-
-  //update the state with new filter
-  const handleFilterChange = (newFilter) => {
-    setSelectedType(newFilter);
+  //decides on the title for the section of cards
+  const titleDecider = () => {
+    var finalType = "";
+    switch (selectedType) {
+      case "featured":
+        finalType = "Featured";
+        break;
+      case "website":
+        finalType = "Websites";
+        break;
+      case "game":
+        finalType = "Games";
+        break;
+      case "other":
+        finalType = "Other";
+        break;
+    }
+    return <h2 className="projects__category">{finalType}</h2>;
   };
 
   //holds cards of selected type
   const filteredCards =
-    selectedType === "all"
-      ? cards
+    selectedType === "featured"
+      ? cards.filter((card) => card.featured)
       : cards.filter((card) => card.type === selectedType);
 
-  //create an array of unique card types for the dropdown
-  const cardTypes = ["all", ...new Set(cards.map((card) => card.type))];
+  /* //create an array of unique card types for the buttons
+  const cardTypes = [
+    "featured",
+    ...new Set(
+      cards.map((card) => {
+        switch (card.type) {
+          case "game":
+            return "games";
+          case "website":
+            return "websites";
+          default:
+            return card.type; // If no plural form is specified, use the original type
+        }
+      })
+    ),
+  ]; */
 
-  // Group the cards by their types
-  const groupedCards = cards.reduce((acc, card) => {
-    const { type } = card;
-    if (!acc[type]) {
-      acc[type] = [];
-    }
-    acc[type].push(card);
-    return acc;
-  }, {});
+  //create an array of unique card types for the buttons
+  const cardTypes = [
+    "featured",
+    ...new Set(
+      cards.map((card) => {
+        return card.type;
+      })
+    ),
+  ];
 
-  //handle the dropdown change event
-  const handleTypeChange = (event) => {
-    setSelectedType(event.target.value);
+  // handle the filter button click event
+  const handleTypeChange = (type) => {
+    /* const singularType =
+      type === "games" ? "game" : type === "websites" ? "website" : type;
+    setSelectedType(singularType); */
+    setSelectedType(type);
   };
 
-  //rough idea, will need to condense these 2 methods later
-  const titleDecider = () => {
-    var finalType = "";
-    switch (selectedType) {
-      case "website":
-        finalType = "Websites";
-        break;
-      case "game":
-        finalType = "Games";
-        break;
-      case "other":
-        finalType = "Other";
-        break;
-    }
-
-    return <h2 className="projects__category">{finalType}</h2>;
-  };
-
-  const titleDeciderAll = (type) => {
-    var finalType = "";
-    switch (type) {
-      case "website":
-        finalType = "Websites";
-        break;
-      case "game":
-        finalType = "Games";
-        break;
-      case "other":
-        finalType = "Other";
-        break;
-    }
-
-    return <h2 className="projects__category">{finalType}</h2>;
-  };
-
-  //--------------------------------- end filter dropdown ---------------------------------
+  //--------------------------------- end filter buttons ---------------------------------
 
   function CardComponent({ card }) {
     //a component that assigns values to Card. i specifically made it its own thing because Card is called twice in the body code and it would be a pain to change the arguments in 2 separate places if needed
@@ -153,45 +149,37 @@ function Body() {
   return (
     <React.Fragment>
       <div className="header">
-        <div className="spacer"></div>
         <h1>My Projects</h1>
         <div className="filter">
           <label>
             <i class="fa fa-filter"></i>
           </label>
-          <select value={selectedType} onChange={handleTypeChange}>
+          <div className="buttons">
             {cardTypes.map((type) => (
-              <option key={type} value={type}>
+              <button
+                key={type}
+                className={`filter-button button ${
+                  selectedType === type ? "button-primary" : "button-secondary"
+                }`}
+                onClick={() => handleTypeChange(type)}
+              >
                 {type}
-              </option>
+              </button>
             ))}
-          </select>
+          </div>
         </div>
       </div>
 
       <div>
         <hr />
-        {selectedType === "all" ? (
-          Object.entries(groupedCards).map(([type, cards]) => (
-            <div key={type}>
-              {titleDeciderAll(type)}
-              <div className="grid">
-                {cards.map((card) => (
-                  <CardComponent card={card} />
-                ))}
-              </div>
-            </div>
-          ))
-        ) : (
-          <div>
-            {titleDecider()}
-            <div className="grid">
-              {groupedCards[selectedType].map((card) => (
-                <CardComponent card={card} />
-              ))}
-            </div>
+        <div>
+          {titleDecider()}
+          <div className="grid">
+            {filteredCards.map((card) => (
+              <CardComponent card={card} />
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </React.Fragment>
   );
