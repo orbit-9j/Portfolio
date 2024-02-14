@@ -111,23 +111,25 @@ const ProjectPage = ({ items }) => {
             </div>
 
             <div className="button-wrapper">
-              {project.links.map((link) =>
-                link.location ? (
-                  <a
-                    key={link.id}
-                    href={
-                      link.pdf
-                        ? process.env.PUBLIC_URL + "/" + link.location
-                        : link.location
-                    }
-                    className="button project-button button-primary"
-                    target={link.internal ? "_self" : "_blank"}
-                    rel={link.internal ? "" : "noopener noreferrer"}
-                  >
-                    {link.name}
-                  </a>
-                ) : null
-              )}
+              {project.links
+                ? project.links.map((link) =>
+                    link.location ? (
+                      <a
+                        key={link.id}
+                        href={
+                          link.pdf
+                            ? process.env.PUBLIC_URL + "/" + link.location
+                            : link.location
+                        }
+                        className="button project-button button-primary"
+                        target={link.internal ? "_self" : "_blank"}
+                        rel={link.internal ? "" : "noopener noreferrer"}
+                      >
+                        {link.name}
+                      </a>
+                    ) : null
+                  )
+                : null}
             </div>
           </section>
         ))}
