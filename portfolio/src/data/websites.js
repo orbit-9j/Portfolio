@@ -1,5 +1,22 @@
 export default [
   {
+    id: 10,
+    type: "website",
+    image: "Framer.png",
+    title: "Lilac Slate landing page design",
+    description:
+      "A Framer website prototype for a fictional company. An exploration of Framer's features and limitations.",
+    timestamp: "02/2024",
+    links: [
+      {
+        id: 1,
+        name: "Go To Website",
+        location: "https://yummy-interfaces-823123.framer.app/",
+        primary: "true",
+      },
+    ],
+  },
+  {
     id: 9,
     type: "website",
     image: "pool.png",
