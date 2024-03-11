@@ -1,18 +1,36 @@
 export default [
   {
+    id: 11,
+    type: "website",
+    image: "to-do.png",
+    title: "Stickly: helping tasks stick in your mind",
+    description:
+      "A simple CRUD to-do app using Laravel, Inertia, and React. Styled with Tailwind. Made for a technical interview.",
+    timestamp: "Completed 06/03/2024",
+    featured: true,
+    links: [
+      {
+        id: 1,
+        name: "View on GitHub",
+        location: "https://github.com/orbit-9j/to-do-app",
+        primary: true,
+      },
+    ],
+  },
+  {
     id: 10,
     type: "website",
     image: "Framer.png",
     title: "Lilac Slate landing page design",
     description:
       "A Framer website prototype for a fictional company. An exploration of Framer's features and limitations.",
-    timestamp: "02/2024",
+    timestamp: "Completed 02/2024",
     links: [
       {
         id: 1,
         name: "Go To Website",
         location: "https://yummy-interfaces-823123.framer.app/",
-        primary: "true",
+        primary: true,
       },
     ],
   },
